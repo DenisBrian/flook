@@ -1,0 +1,489 @@
+/* Bootstrap */
+.jumbotron{
+  padding: 15em 0;
+  margin: 0;
+}
+.card{
+  margin: 2em .3em;
+}
+.card-body h3{
+  font-size: 21px;
+  padding-left: 1.5em;
+}
+
+.points{
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Como funciona */
+.card-title-1{
+  background-image: url(../images/numeroUm.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+.card-title-2{
+  background-image: url(../images/numeroDois.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+.card-title-3{
+  background-image: url(../images/numeroTres.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 25px;
+}
+
+/* Formulario */
+
+.sub-form a{
+  width: 50%;
+  margin: 0 .5em;
+}
+.sub-form2 a{
+  display: block;
+  width: 100%;
+}
+.background-blue{
+  background: #36D1DC;
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+}
+
+.background-blue p{
+  margin: 1em 0;
+}
+
+/* Vantagens */
+.container-advantages{
+  background-color: #5691c8;
+  color: #fff;
+}
+.container-advantages h2{
+  margin-top: .5em;
+}
+
+/* Rodapé */
+.footer{
+  background-color: #5691c8;
+  border-top: 1px solid #4f86b9;
+
+}
+.footer a,.footer h5 , .footer p{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer h5{
+  padding-top: 2em;
+}
+
+.footer-copyright{
+  background-color:#4f86b9;
+}
+.btn-backTop{
+  margin-top: 4.7em;
+  margin-bottom: 1em;
+  background: #5691c8;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  padding: .3em;
+  color: #fff;
+  cursor: pointer;
+}
+
+i{
+  font-size: 30px;
+  margin: .4em .25em;
+  color: #fff;
+}
+
+.key-icone{
+  color: #e0ee14;
+  display: inline-block;
+  font-size: 16px
+}
+
+.certificado-icone{
+  color: #61a2de;
+  display: inline-block;
+  font-size: 16px
+}
+
+/* Menu */
+.navbar-default{
+  background: #5691c8;
+  box-shadow: 0 2px 8px -2px rgba(0,0,0,.8);
+}
+.navbar-default a{
+  color:#fff;
+  font-weight: 500;
+}
+.navbar-default a:hover{
+  color:#f4f4f4;
+  transition-duration: .5s;
+}
+.btn-blue{
+  padding: 0 1.5em;
+  background-color:#5691c8;
+  color: #5691c8;
+  background-image: url(../images/icone-lupa.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-standard{
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 7px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background-color: #2ecc71;
+  box-shadow: 0px 5px 0px 0px #15B358;
+}
+.background-blue{
+  background: #61a2de;
+  padding: 2em 0;
+}
+
+/* Curso */
+.college-image{
+  width: 165px;
+  height: 165px;
+  border-right: 1px solid #d0d0d0;
+}
+.college-image2{
+  width: 165px;
+  height: 165px;
+  text-align: center;
+}
+.container-course{
+  margin: 3em auto;
+}
+.course-icon{
+  color: #000000;
+}
+.course-content{
+  margin: 1em 0;
+}
+.course-content2{
+  margin: 2em ;
+}
+.course-content p{
+  margin: .1em 0 .8em 0;
+}
+.btn-seeMore{
+  margin-top:5em;
+  background: #2ecc71;
+  padding: .2em .7em;
+  border-radius: .8em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-seeMore:hover{
+  color: #fff;
+}
+
+
+.fa-thumbs-up{
+  color: #59f46f;
+}
+
+.fa-thumbs-down{
+  color: #cf2240;
+}
+
+.container-like span{
+  color: #000;
+}
+/* Bot */
+.inputBot{
+  width: 85%;
+  display: inline-block;
+}
+
+.container-message{
+  background-color: #5691c8;
+  position:absolute;
+  padding-top: 1em;
+  bottom:0;
+  width:100%;
+}
+
+.btn-bot{
+  margin-bottom: 1em
+}
+
+.bot p{
+  padding: 1em;
+  background: #fff;
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2em;
+}
+
+/* Perfil */
+
+.name{
+  color: #fff;
+}
+
+.favorite-icon{
+  color: #595959;
+  cursor: pointer;
+  margin: 0 .5em;
+}
+
+.badge a{
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff;
+}
+
+.footer-text {
+  opacity:.4;
+}
+
+.pencil-icon{
+  font-size: 14px;
+}
+
+.camera-icon{
+  position: absolute;
+  background:#eeeeee;
+  padding: 5px;
+  border-radius: 15px;
+  border:.3px solid #747474;
+  cursor: pointer;
+  color: #323232;
+  display: inline-block;
+  font-size: 16px
+}
+
+.camera-icon:hover{
+  background:#dfdfdf;
+  border:.2px solid #747474;
+}
+
+.tool-icon{
+  color: #606060;
+  font-size:16px;
+  margin-right: .8em;
+}
+
+.fa4{
+  color: #180077;
+  font-size:20px;
+  margin-right: .8em;
+}
+
+.fa5{
+  color: #e8f929;
+  font-size:19px;
+  margin-right: .8em;
+}
+
+.btn-certificado{
+  cursor: pointer;
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+  .image-howWorks{
+    background-image: url(../images/comoFunciona.png);
+    background-size: 440px 380px;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .question{
+    max-width: 65%;
+  }
+}
+
+/* CHABOT */
+.chatbot{
+  position: fixed;
+  right: 25px;
+  bottom:20px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.chatbot ul {
+  list-style: none;
+}
+
+.chatbot ul li a{
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 500ms ease;
+}
+
+.chat-back{
+  background:#3b5998;
+  border-radius: 100%;
+}
+
+#live-chat {
+  bottom: 0;
+  font-size: 14px;
+  right: 24px;
+  position: fixed;
+  width: 350px;
+  border: 1px solid #939393;
+  border-radius: 5px;
+  visibility:hidden;
+  z-index: 999999999;
+}
+
+#live-chat header {
+  background: #5691c8;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 16px 24px;
+}
+
+#live-chat h4:before {
+  background: #1a8a34;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  margin: 0 8px 0 0;
+  width: 8px;
+}
+
+#live-chat h4 {
+  font-size: 16px;
+}
+
+#live-chat h5 {
+  font-size: 15px;
+}
+
+#live-chat input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  outline: none;
+  width: 300px;
+}
+
+.chat-close {
+  background: #4a80b1;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  float: right;
+  font-size: 15px;
+  height: 16px;
+  line-height: 16px;
+  margin: 2px 0 0 0;
+  text-align: center;
+  width: 16px;
+}
+
+.chat {
+  background: #fff;
+}
+
+.chat-history {
+  height: 252px;
+  padding: 8px 24px;
+  overflow-y: scroll;
+}
+
+.chat-message img {
+  border-radius: 50%;
+  float: left;
+}
+
+.chat-message-content {
+  margin-left: 56px;
+}
+
+/* RANKING */
+.gold {
+  padding-left: 35px;
+  background-image: url(../images/gold.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.copper {
+  padding-left: 35px;
+  background-image: url(../images/bronze.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.silver {
+  padding-left: 35px;
+  background-image: url(../images/prata.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.participation{
+  padding-left: 35px;
+  background-image: url(../images/participation.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.ranking h6{
+  line-height: 2.5em;
+}
+
+.ranking-person p{
+  float: right;
+  display: inline-block;
+  margin: 0;
+}
+
+.recentTopics p{
+  line-height: 2em;
+}
+
+.bannerForum{
+  background: #a1b0c0;
+  color: #fff;
+}
+
+.answer label{
+  width: 100%;
+  font-weight: 500;
+}
+
+.answer textarea{
+  width: 100%;
+  font-weight: 500;
+}
+
+.formQuestion textarea{
+    width: 100%;
+}
+
+.formQuestion label{
+  font-size: 18px;
+}
+
+.formQuestion h6{
+  display: inline-block;
+}
