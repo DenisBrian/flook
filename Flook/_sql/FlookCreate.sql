@@ -1,3 +1,4 @@
+-- teste
 CREATE TABLE T_FLO_ENDERECO(
   cd_endereco INTEGER PRIMARY KEY NOT NULL,
   ds_logradouro VARCHAR(50),
