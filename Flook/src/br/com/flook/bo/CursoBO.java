@@ -9,10 +9,10 @@ import br.com.flook.dao.CursoDAO;
 * Responável por todas as Regras de negócio e padronizações do Curso
 * 1°) O nome não pode conter mais que 40 caracteres
 * @author DENIS BRIAN CANOLA
-* @author FELIPE
-* @author RAFAEL
-* @author MATHEUS
-* @author JEFFREY
+* @author FELIPE HONÓRIO CAMARGO
+* @author RAFAEL MACHADO CARDOSO
+* @author MATHEUS APRIGIO DA SILVA
+* @author JEFFREY RODRIGUES INNOCENCIO
 * @version 1.0
 * @since 1.0
 * @see br.com.flook.beans.Curso
