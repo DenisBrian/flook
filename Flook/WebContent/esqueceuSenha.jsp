@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta content="UTF-8">
-<title>Procurar Curso - Flook</title>
+<title>Flook</title>
 <%@ include file="header.jsp"%>
 </head>
 <body class="background-blue">

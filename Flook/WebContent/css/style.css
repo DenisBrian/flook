@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
 /* Bootstrap */
+p, a, span{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: inherit;
+}
+
+h1, h2, h3 , h4, h5, h6{
+  font-family:  'Open Sans', sans-serif;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
 .jumbotron{
   padding: 15em 0;
   margin: 0;
@@ -17,6 +32,11 @@
 }
 
 /* Como funciona */
+
+.searchIndex{
+  padding: 1.3em 1em;
+}
+
 .card-title-1{
   background-image: url(../images/numeroUm.png);
   background-repeat: no-repeat;
@@ -65,7 +85,7 @@
   margin-top: .5em;
 }
 
-/* Rodapé */
+/* RodapÃ© */
 .footer{
   background-color: #5691c8;
   border-top: 1px solid #4f86b9;
@@ -113,18 +133,19 @@ i{
 }
 
 /* Menu */
-.navbar-default{
-  background: #5691c8;
+.navbar-light{
+  background-color: #5691c8 !important;
   box-shadow: 0 2px 8px -2px rgba(0,0,0,.8);
 }
-.navbar-default a{
-  color:#fff;
+.navbar-light a{
+  color:#fff !important;
   font-weight: 500;
 }
-.navbar-default a:hover{
-  color:#f4f4f4;
+.navbar-light a:hover{
+  color:#f4f4f4 !important;
   transition-duration: .5s;
 }
+
 .btn-blue{
   padding: 0 1.5em;
   background-color:#5691c8;
@@ -145,6 +166,7 @@ i{
   background-color: #2ecc71;
   box-shadow: 0px 5px 0px 0px #15B358;
 }
+
 .background-blue{
   background: #61a2de;
   padding: 2em 0;
@@ -164,6 +186,11 @@ i{
 .container-course{
   margin: 3em auto;
 }
+
+.container-course h3{
+  display:inline-block;
+}
+
 .course-icon{
   color: #000000;
 }
@@ -186,6 +213,8 @@ i{
 }
 
 .btn-seeMore:hover{
+  background-color: #22c651;
+  transition-duration: .8s;
   color: #fff;
 }
 
@@ -486,4 +515,8 @@ i{
 
 .formQuestion h6{
   display: inline-block;
+}
+
+.facont{
+	color: #2d2d2d
 }

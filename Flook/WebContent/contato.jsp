@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta content="UTF-8">
-<title>Contato - Flook</title>
+<title>Flook</title>
 <%@ include file="header.jsp"%>
 </head>
 <body>
@@ -55,9 +55,9 @@
 				<div class="text-center col-12 col-sm-12 col-md-4">
 					<img src="images/carta.png" alt="" width="60px">
 					<h4>Redes Sociais</h4>
-					<a href="#"><i class="fab fa-facebook" style="color: #2d2d2d"></i></a>
-					<a href="#"><i class="fab fa-linkedin" style="color: #2d2d2d"></i></a>
-					<a href="#"><i class="fab fa-google-plus-square"
+					<a href="#"><i class="fab fa-facebook facont"></i></a>
+					<a href="#"><i class="fab fa-linkedin facont"></i></a>
+					<a href="#"><i class="fab fa-google-plus-square facont"
 						style="color: #2d2d2d"></i></a>
 				</div>
 			</div>
