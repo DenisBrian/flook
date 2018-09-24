@@ -4,9 +4,10 @@
         <div class="col-md-4 ">
           <h5 >Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#!">Como Funciona</a></li>
-            <li><a href="#!">Cursos</a></li>
-            <li><a href="#!">Contato</a></li>
+            <li><a href="#howWork">Como Funciona</a></li>
+            <li><a href="./homeTopico.jsp">Fórum</a></li>
+            <li><a href="./procurarCurso.jsp">Cursos</a></li>
+            <li><a href="./contato.jsp">Contato</a></li>
           </ul>
         </div>
         <div class="col-md-4 ">

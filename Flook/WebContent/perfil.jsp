@@ -13,7 +13,7 @@
     <div class="container">
       <div class="text-center">
         <a><i class="fas fa-camera  mr-2 camera-icon mx-auto" data-toggle="modal" data-target=".profileImage"></i></a>
-        <img  class="rounded-circle mx-auto"src="../images/user.png" alt="" width="110" height="110">
+        <img  class="rounded-circle mx-auto"src="./images/user.png" alt="" width="110" height="110">
         <a href=""><h5 class="name mt-4">  <i class="fas fa-pencil-alt pencil-icon mr-2"></i></a>Thais Araújo da Silva</h5>
       </div>
     </div>
@@ -56,7 +56,7 @@
             <div class="container">
               <h5>Alterar certificado</h5>
               <hr class="my-3">
-              <img class="mx-auto d-block mt-4 mb-4"src="../images/certificado.png" alt="" width="350px" height="350px">
+              <img class="mx-auto d-block mt-4 mb-4"src="./images/certificado.png" alt="" width="350px" height="350px">
               <input name="myFile" type="file">
               <div class="mt-4">
                 <button type="button" name="button" class="btn btn-danger mr-2" data-dismiss="modal">Cancelar</button>
@@ -72,7 +72,7 @@
             <div class="container">
               <h5>Alterar foto</h5>
               <hr class="my-3">
-              <img class="mx-auto d-block mt-4 mb-4"src="../images/user.png" alt="">
+              <img class="mx-auto d-block mt-4 mb-4"src="./images/user.png" alt="">
               <input name="myFile" type="file">
               <div class="mt-4">
                 <button type="button" name="button" class="btn btn-danger mr-2"  data-dismiss="modal"

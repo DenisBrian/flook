@@ -51,7 +51,7 @@
     <div class="card">
       <div class="row">
         <div class="col-md-2 text-center">
-          <img class="college-image"src="../images/logo-usp.png" alt="">
+          <img class="college-image"src="./images/logo-usp.png" alt="">
         </div>
         <div class="col-md-8">
           <div class="row course-content">
@@ -74,7 +74,7 @@
     <div class="card">
       <div class="row">
         <div class="col-md-2 text-center">
-          <img class="college-image"src="../images/logo-fiap.jpg" alt="">
+          <img class="college-image"src="./images/logo-fiap.jpg" alt="">
         </div>
         <div class="col-md-8">
           <div class="row course-content">
@@ -97,7 +97,7 @@
     <div class="card">
       <div class="row">
         <div class="col-md-2 text-center">
-          <img class="college-image"src="../images/logo-unip.jpg" alt="">
+          <img class="college-image"src="./images/logo-unip.jpg" alt="">
         </div>
         <div class="col-md-8">
           <div class="row course-content">
@@ -120,7 +120,7 @@
     <div class="card">
       <div class="row">
         <div class="col-md-2 text-center">
-          <img class="college-image"src="../images/logo-usp.png" alt="">
+          <img class="college-image"src="./images/logo-usp.png" alt="">
         </div>
         <div class="col-md-8">
           <div class="row course-content">
@@ -143,7 +143,7 @@
     <div class="card">
       <div class="row">
         <div class="col-md-2 text-center">
-          <img class="college-image"src="../images/logo-fiap.jpg" alt="">
+          <img class="college-image"src="./images/logo-fiap.jpg" alt="">
         </div>
         <div class="col-md-8">
           <div class="row course-content">

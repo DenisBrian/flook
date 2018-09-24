@@ -19,7 +19,7 @@
   <div class="container pt-3 ">
     <h4 class="pt-2">Como posicionar elementos com CSS</h4>
     <hr class="my-3">
-    <p><img src="../images/user.png" alt="" width="35px" height="35px" class="mr-4">Criado por: <span>Thais Araújo</span> <span>(25.00 pontos)</span></p>
+    <p><img src="./images/user.png" alt="" width="35px" height="35px" class="mr-4">Criado por: <span>Thais Araújo</span> <span>(25.00 pontos)</span></p>
     <p class="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
   <div class="container-fluid mt-5 pt-3 pb-3 bannerForum">
@@ -29,13 +29,13 @@
   </div>
   <div class="container pt-3">
     <div class="pt-3 pb-3">
-      <p><img src="../images/user.png" alt="" width="35px" height="35px" class="mr-4"><span>Matheus Silva</span> <span>(431.00 pontos)</span><img src="../images/correct.png" class="ml-3 mr-3"alt="" height="30" width="30"></p>
+      <p><img src="./images/user.png" alt="" width="35px" height="35px" class="mr-4"><span>Matheus Silva</span> <span>(431.00 pontos)</span><img src="./images/correct.png" class="ml-3 mr-3"alt="" height="30" width="30"></p>
       <p class="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       <hr class="my-3">
       <div class="pt-3 pb-3">
-        <p><img src="../images/user.png" alt="" width="35px" height="35px" class="mr-4"><span>Matheus Silva</span> <span>(431.00 pontos)</span></p>
+        <p><img src="./images/user.png" alt="" width="35px" height="35px" class="mr-4"><span>Matheus Silva</span> <span>(431.00 pontos)</span></p>
         <p class="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>

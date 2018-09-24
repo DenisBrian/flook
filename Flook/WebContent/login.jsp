@@ -23,7 +23,7 @@
 							class="form-control" id="password" tabindex="2">
 					</div>
 					<div class="text-center">
-						<button type="submit" class="btn btn-standard">Entrar</button>
+						<button type="submit" class="btn btn-standard"><a href="./perfil.jsp">Entrar</a></button>
 						<div class="mt-3">
 							<a href="./cadastrar.jsp">Não possui conta?</a> <span>-</span> <a
 								href="./esqueceuSenha.jsp">Esqueci a senha</a>

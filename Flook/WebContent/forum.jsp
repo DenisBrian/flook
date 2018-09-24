@@ -21,7 +21,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-md-2 mb-1 text-center" >
-          <p class="text-center"><img src="../images/user.png" class="mt-4 " alt="" width="50" height="50">
+          <p class="text-center"><img src="./images/user.png" class="mt-4 " alt="" width="50" height="50">
           <h6>Matheus Aprigio</h6>
           <p>(<span>423,422 </span>pontos)</p>
         </div>
@@ -33,7 +33,7 @@
           <p class="mt-5 text-center"><a href=""><span>21</span> Respostas</a></p>
         </div>
         <div class="col-md-2">
-          <p class="text-center"><img src="../images/correct.png" class="mt-5" width="50" height="50"  alt=""></p>
+          <p class="text-center"><img src="./images/correct.png" class="mt-5" width="50" height="50"  alt=""></p>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-md-2 mb-1 text-center" >
-          <p class="text-center"><img src="../images/user.png" class="mt-4 " alt="" width="50" height="50">
+          <p class="text-center"><img src="./images/user.png" class="mt-4 " alt="" width="50" height="50">
           <h6 >Jair Bolsonaro</h6>
           <p>(<span>13,00 </span>pontos)</p>
           </p>
@@ -55,7 +55,7 @@
           <p class="mt-5 text-center"><a href=""><span>13</span> Respostas</a></p>
         </div>
         <div class="col-md-2">
-          <p class="text-center"><img src="../images/error.png" class="mt-5" width="50" height="50"  alt=""></p>
+          <p class="text-center"><img src="./images/error.png" class="mt-5" width="50" height="50"  alt=""></p>
         </div>
       </div>
     </div>

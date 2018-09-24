@@ -11,12 +11,12 @@
 <%@ include file="menu.jsp"%>
   <div class="container">
     <div class="container-course text-center">
-     <a class="pr-4" href="procurarCurso.html"><img src="../images/back.png" width="17" height="17" alt="">Voltar</a><h3>FIAP - Análise e Desenvolvimento de Sistemas</h3>
+     <a class="pr-4" href="procurarCurso.html"><img src="./images/back.png" width="17" height="17" alt="">Voltar</a><h3>FIAP - Análise e Desenvolvimento de Sistemas</h3>
       <hr class="my-4">
     </div>
     <div class="row">
       <div class="col-md-2 text-center">
-        <img class="college-image2"src="../images/logo-fiap.jpg" alt="">
+        <img class="college-image2"src="./images/logo-fiap.jpg" alt="">
       </div>
       <div class="col-md-10">
         <div class="container-fluid">

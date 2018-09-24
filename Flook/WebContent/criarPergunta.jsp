@@ -11,7 +11,7 @@
 	<%@ include file="menu.jsp"%>
   <div class="container">
     <form class="formQuestion mt-5">
-      <img src="../images/user.png" alt="" width="40" height="40">
+      <img src="./images/user.png" alt="" width="40" height="40">
       <h6 class="">Matheus Aprigio <span>(XX,XX pontos)</span></h6>
       <div class="form-group mt-4">
         <label for="curse">Curso Selecionado:</label>
