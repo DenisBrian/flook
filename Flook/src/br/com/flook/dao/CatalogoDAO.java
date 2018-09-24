@@ -17,19 +17,21 @@ public class CatalogoDAO {
 	}
 	
 	public int gravar(Catalogo obj) throws Exception{	
-		String _sql = "INSERT INTO T_FLO_CATALOGO (DS_CATALOGO) VALUES (?);"
-				    + "SELECT SQ_T_FLO_CATALOGO.CURRVAL AS CD_CATALOGO FROM DUAL;";
+		String _sql = "INSERT INTO T_FLO_CATALOGO (DS_CATALOGO) VALUES (?)";
 		
-		ps = con.prepareStatement(_sql);
+		ps = con.prepareStatement(_sql,new String[]{"CD_CATALOGO"});
 		ps.setString(1, obj.getDescricao());		
-		rs = ps.executeQuery(_sql);
+		int affectedRows = ps.executeUpdate();
 		
 		int cod = 0;
 		
-		if(rs.next()) {
-			rs.getInt("CD_CATALOGO");
-		}
-		
+		if(affectedRows > 0) {
+			rs = ps.getGeneratedKeys();
+			
+			if(rs.next())
+				cod = rs.getInt(1);
+			
+		}		
 		return cod;
 	}	
 	public Catalogo obter(int cod) throws Exception{
@@ -48,5 +50,8 @@ public class CatalogoDAO {
 		
 		return obj;
 	}
-	
+
+	public void fechar() throws Exception{
+		con.close();
+	}
 }

@@ -1,5 +1,5 @@
 package br.com.flook.beans;
-
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Usuario {
@@ -84,11 +84,21 @@ public class Usuario {
 	}
 	
 	public String getAll() {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");	
+		String data = "";
+		
+		if(getDataNascimento() != null)
+			data = sdf.format(getDataNascimento().getTime());		
+		
+		String tipo = "";
+		if(getTipoUsuario() != null)
+			tipo = getTipoUsuario().getAll();
+			
 		return "Codigo: " + getCodigo()  + "\n" +
-				"Tipo de Usuário: " + getTipoUsuario().getAll()  + "\n"+
+				"Tipo de Usuário: " + tipo  + "\n"+
 	           "Email: " + getEmail() + "\n" +
 			   "Senha: " + getSenha() + "\n" +
-	           "Data Nascimento: " + getDataNascimento() + "\n" +
+	           "Data Nascimento: " + data + "\n" +
 	           "Imagem: " + getImagem() + "\n" +
 	           "Pontos acumulados: " + getPontoAcumulado() ;
 	}

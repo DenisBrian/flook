@@ -29,19 +29,22 @@ public class CursoDAO {
 		con = Conexao.conectar();
 	}
 	public int gravar(Curso obj) throws Exception{	
-		String _sql = "INSERT INTO T_FLO_CURSO (CD_CATALOGO,NM_CURSO) VALUES (?,?);"
-				    + "SELECT SQ_T_FLO_CURSO.CURRVAL AS CD_CURSO FROM DUAL";
+		String _sql = "INSERT INTO T_FLO_CURSO (CD_CATALOGO,NM_CURSO) VALUES (?,?)";
 		
-		ps = con.prepareStatement(_sql);
+		ps = con.prepareStatement(_sql,new String[]{"CD_CURSO"});
 		ps.setInt(1, obj.getCatalogo().getCodigo());
 		ps.setString(2, obj.getNome());
 		
-		rs = ps.executeQuery(_sql);
+		int affectedRows = ps.executeUpdate();
 		
 		int cod = 0;
 		
-		if(rs.next()) {
-			rs.getInt("CD_CURSO");
+		if(affectedRows > 0) {
+			rs = ps.getGeneratedKeys();
+			
+			if(rs.next())
+				cod = rs.getInt(1);
+			
 		}
 		
 		return cod;
@@ -50,7 +53,7 @@ public class CursoDAO {
 		String _sql = "SELECT T1.CD_CURSO, T1.NM_CURSO, T2.CD_CATALOGO, T2.DS_CATALOGO "
 				    + "FROM T_FLO_CURSO T1 "
 				    + "INNER JOIN T_FLO_CATALOGO T2 ON T1.CD_CURSO = T2.CD_CATALOGO "
-				    + "WHERE COD_CURSO = ?";
+				    + "WHERE CD_CURSO = ?";
 		
 		ps = con.prepareStatement(_sql);
 		ps.setInt(1, cod);	

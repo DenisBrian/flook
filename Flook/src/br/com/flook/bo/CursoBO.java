@@ -22,11 +22,12 @@ public class CursoBO {
 	
 	public static int novoCurso(Curso curso) throws Exception {
 		
-		// validação
 		if(curso.getNome().length() > 40)
 			return 0;	
 		
-		// padronização
+		if((CatalogoBO.obterPorCodigo(curso.getCatalogo().getCodigo())).getCodigo() == 0)
+			return 0;
+		
 		curso.setNome(curso.getNome().toUpperCase());
 		
 		CursoDAO dao = new CursoDAO();
