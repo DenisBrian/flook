@@ -12,9 +12,9 @@
         </div>
         <div class="col-md-4 ">
           <h5 >Redes Sociais</h5>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-google-plus-square"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://plus.google.com/discover" target="_blank"><i class="fab fa-google-plus-square"></i></a>
         </div>
         <div class="col-md-4">
           <button type="button" name="button" class="btn-backTop"> &#x25B2; Voltar ao topo</button>

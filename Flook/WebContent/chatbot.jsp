@@ -13,7 +13,7 @@
 	<div class="chat">
 		<div class="chat-history">
 			<div class="chat-message mt-3 mb-3 clearfix">
-				<img src="images/user.png" alt="" width="32" height="32">
+				<img src="images/bot.png" alt="" width="32" height="32">
 				<div class="chat-message-content clearfix">
 					<h5>Flook Bot</h5>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
