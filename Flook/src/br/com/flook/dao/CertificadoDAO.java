@@ -12,7 +12,14 @@ import br.com.flook.beans.Certificado;
 import br.com.flook.beans.Curso;
 import br.com.flook.beans.Instituicao;
 import br.com.flook.conexao.Conexao;
-
+/**
+ * Classe responsável por manipular a tabela T_FLO_CERTIFICADO.
+ * @author DENIS BRIAN CANOLA
+ * @version 1.0
+ * @since 1.0
+ * @see br.com.fiap.beans.Certificado
+ * @see br.com.fiap.bo.CertificadoBO
+ */
 public class CertificadoDAO {
 	private Connection con;
 	private PreparedStatement ps;
@@ -22,6 +29,11 @@ public class CertificadoDAO {
 		con = Conexao.conectar();
 	}
 
+	/**
+	 * Construtor responsável por abrir a conexão
+	 * @throws Exception Exceção checked SQLExceprion
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public boolean gravar(Certificado obj) throws Exception {
 		String _sql = "INSERT INTO T_FLO_CERTIFICADO (CD_USUARIO,CD_INSTITUICAO,CD_CURSO,IMG_CERTIFICADO,DT_CONCLUSAO) VALUES (?,?,?,?,?);";
 
@@ -35,6 +47,13 @@ public class CertificadoDAO {
 		return ps.execute();
 	}
 
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_CERTIFICADO
+	 * @param obj Este parâmetro recebe um objeto Certificado beans
+	 * @return retorna valor boleano com true para inserito e false para não inserido
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public List<Certificado> obterPorUsuario(int cod) throws Exception {
 		String _sql = "SELECT\r\n" + 
 				"    T1.DT_CONCLUSAO,\r\n" + 
