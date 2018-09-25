@@ -16,7 +16,7 @@
     </div>
     <div class="row">
       <div class="col-md-2 text-center">
-        <img class="college-image2"src="./images/logo-fiap.jpg" alt="">
+        <img class="college-image2"src="./images/Faculdade/logo-fiap.jpg" alt="">
       </div>
       <div class="col-md-10">
         <div class="container-fluid">

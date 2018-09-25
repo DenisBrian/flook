@@ -11,28 +11,31 @@
 		<h4>Flook Bot</h4>
 	</header>
 	<div class="chat">
-		<div class="chat-history">
-			<div class="chat-message mt-3 mb-3 clearfix">
-				<img src="images/user.png" alt="" width="32" height="32">
-				<div class="chat-message-content clearfix">
-					<h5>Flook Bot</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Error, explicabo quasi ratione odio dolorum harum.</p>
+		<div id="chatHistory" class="chat-history">
+			<c:forEach items="${ items }" var="item">
+				<hr class="my-1">
+				<div class="chat-message mt-3 mb-3 clearfix">
+					<img src="images/user.png" alt="" width="32" height="32">
+					<div class="chat-message-content clearfix">
+						<h5>Usuario</h5>
+						<p>${ item.key }</p>
+					</div>
 				</div>
-			</div>
-			<hr class="my-1">
-			<div class="chat-message mt-3 mb-3 clearfix">
-				<img src="images/user.png" alt="" width="32" height="32">
-				<div class="chat-message-content clearfix">
-					<h5>Thais Araújo</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Error, explicabo quasi ratione odio dolorum harum.</p>
+				<hr class="my-1">
+				<div class="chat-message mt-3 mb-3 clearfix">
+					<img src="images/user.png" alt="" width="32" height="32">
+					<div class="chat-message-content clearfix">
+						<h5>Sr. Robot</h5>
+						${ item.value }
+					</div>
 				</div>
-			</div>
+			</c:forEach>
+
 		</div>
-		<form class="p-3" action="#" method="post">
+		<form id="formChatbot" class="p-3" action="botServlet" method="post">
 			<fieldset>
-				<input type="text" placeholder="Digite a sua mensagem…" autofocus>
+				<input id="inpChatbot" name="pergunta" type="text"
+					placeholder="Digite a sua mensagem…" autocomplete="off" autofocus>
 				<input type="hidden">
 			</fieldset>
 		</form>

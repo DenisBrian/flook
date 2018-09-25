@@ -89,6 +89,7 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="chatbot.jsp"%>
 	<%@ include file="footer.jsp"%>
 </body>
 </html>
