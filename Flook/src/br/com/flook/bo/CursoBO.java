@@ -6,10 +6,10 @@ import br.com.flook.beans.Curso;
 import br.com.flook.dao.CursoDAO;
 
 /**
-* Respon�vel por todas as Regras de neg�cio e padroniza��es do Curso
-* 1�) O nome n�o pode conter mais que 40 caracteres
+* Responável por todas as Regras de negócio e padronizações do Curso
+* 1°) O nome não pode conter mais que 40 caracteres
 * @author DENIS BRIAN CANOLA
-* @author FELIPE HON�RIO CAMARGO
+* @author FELIPE HONÓRIO CAMARGO
 * @author RAFAEL MACHADO CARDOSO
 * @author MATHEUS APRIGIO DA SILVA
 * @author JEFFREY RODRIGUES INNOCENCIO
@@ -19,7 +19,13 @@ import br.com.flook.dao.CursoDAO;
 * @see br.com.flook.dao.CursoDAO
 */
 public class CursoBO {
-	
+	/**
+	 * Este método ira validar e repassar o objeto Curso para a classe CursoDAO
+	 * @param curso Este parâmetro representa um objeto Curso do Beans.
+	 * @return O método retorna um numero com o codigo do Curso.
+	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public static int novoCurso(Curso curso) throws Exception {
 		
 		if(curso.getNome().length() > 40)
@@ -36,14 +42,28 @@ public class CursoBO {
 		dao.fechar();
 		return cod;
 	}
-
+	
+	/**
+	 * Este método ira buscar os objetos Curso pelo nome.
+	 * @param nome Este parâmetro representa o nome do curso.
+	 * @return O método retorna os Cursos desejados
+	 * @throws Exception Tratado a exeção checked SQLExceptio
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public static List<Curso> obterCursosPorNome(String nome) throws Exception{
 		CursoDAO dao = new CursoDAO();
 		List<Curso> cursos = dao.obter(nome);
 		dao.fechar();
 		return cursos;
 	}
-
+	
+	/**
+	 * Este método ira buscar o objeto Curso por seu codigo
+	 * @param codigo Este parâmetro representa o codigo do curso.
+	 * @return O método retorna o Curso desejado.
+	 * @throws Exception Tratado a exeção checked SQLExceptio
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public static Curso obterCursoPorCodigo(int codigo) throws Exception{
 		CursoDAO dao = new CursoDAO();
 		Curso curso = dao.obter(codigo);
