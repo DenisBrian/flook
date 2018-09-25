@@ -10,8 +10,10 @@ import br.com.flook.beans.Curso;
 import br.com.flook.conexao.Conexao;
 
 /**
- * Classe respons�vel por manipular a tabela T_FLO_CURSO
+ * Classe responsável por manipular a tabela T_FLO_CURSO
  * @author Denis Brian Canola
+ * @version 1.0
+ * @since 1.0
  * @see br.com.flook.beans.Curso
  * @see br.com.flook.bo.CursoBO
  */
@@ -21,13 +23,21 @@ public class CursoDAO {
 	private ResultSet rs;
 	
 	/**
-	 * Construtor respons�vel por abrir a conex�o
-	 * @throws Exception Exce��o checked SQLException
+	 * Construtor responsável por abrir a conexão
+	 * @throws Exception Exceção checked SQLException
 	 * @author Denis Brian Canola
 	 */
 	public CursoDAO() throws Exception{
 		con = Conexao.conectar();
 	}
+	
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_CURSO
+	 * @param obj Este parâmetro representa um objeto Curso beans
+	 * @return retorna um Int com codigo 0
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public int gravar(Curso obj) throws Exception{	
 		String _sql = "INSERT INTO T_FLO_CURSO (CD_CATALOGO,NM_CURSO) VALUES (?,?)";
 		
@@ -49,6 +59,14 @@ public class CursoDAO {
 		
 		return cod;
 	}	
+	
+	/**
+	 * Busca uma tuba na tabela T_FLO_CURSO pelo código
+	 * @param cod Este parâmetro refere-se ao Id do objeto Curso beans
+	 * @return retorna o objeto Curso beans
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public Curso obter(int cod) throws Exception{
 		String _sql = "SELECT T1.CD_CURSO, T1.NM_CURSO, T2.CD_CATALOGO, T2.DS_CATALOGO "
 				    + "FROM T_FLO_CURSO T1 "
@@ -68,6 +86,14 @@ public class CursoDAO {
 		
 		return obj;
 	}
+	
+		/**
+	 * Busca uma tuba na tabela T_FLO_CURSO pelo atributo nome 
+	 * @param nome Este parâmetro refere-se ao atributo nome do objeto Curso beans
+	 * @return retorna uma lista com os Curso encontrados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public List<Curso> obter(String nome) throws Exception{
 		String _sql = "SELECT T1.CD_CURSO, T1.NM_CURSO, T2.CD_CATALOGO, T2.DS_CATALOGO " + 
 					  "FROM T_FLO_CURSO T1 INNER JOIN T_FLO_CATALOGO T2 ON T1.CD_CATALOGO = T2.CD_CATALOGO " + 
@@ -88,6 +114,11 @@ public class CursoDAO {
 		return cursos;
 	}
 
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception {
 		con.close();
 	}
