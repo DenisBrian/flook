@@ -24,14 +24,20 @@ public class CertificadoDAO {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
-
-	public CertificadoDAO() throws Exception {
-		con = Conexao.conectar();
-	}
-
+	
 	/**
 	 * Construtor responsável por abrir a conexão
 	 * @throws Exception Exceção checked SQLExceprion
+	 * @author DENIS BRIAN CANOLA
+	 */
+	public CertificadoDAO() throws Exception {
+		con = Conexao.conectar();
+	}
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_CERTIFICADO
+	 * @param obj Este parâmetro recebe um objeto Certificado beans
+	 * @return retorna um valor booleano
+	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public boolean gravar(Certificado obj) throws Exception {
@@ -48,9 +54,9 @@ public class CertificadoDAO {
 	}
 
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_CERTIFICADO
-	 * @param obj Este parâmetro recebe um objeto Certificado beans
-	 * @return retorna valor boleano com true para inserito e false para não inserido
+	 * Adiciona uma ou mais tubas na tabela T_FLO_CERTIFICADO
+	 * @param cod Este parâmetro recebe o codigo do Usuario
+	 * @return retorna uma lista com os objetos encontrados
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
 	 */
@@ -98,7 +104,11 @@ public class CertificadoDAO {
 
 		return objs;
 	}
-	
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception{
 		con.close();
 	}
