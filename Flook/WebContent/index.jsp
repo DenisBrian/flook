@@ -31,7 +31,7 @@
 				<div class="text-center col-md-4">
 					<img src="images/livro.png" alt="">
 					<h2>Cursos</h2>
-					<p>XXX Cursos cadastrados</p>
+					<p>XX Cursos cadastrados</p>
 				</div>
 				<div class="text-center col-md-4">
 					<img src="images/avaliacao.png" alt="">
