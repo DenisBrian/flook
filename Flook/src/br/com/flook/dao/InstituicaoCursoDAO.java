@@ -10,16 +10,33 @@ import br.com.flook.beans.Curso;
 import br.com.flook.beans.Instituicao;
 import br.com.flook.beans.InstituicaoCurso;
 import br.com.flook.conexao.Conexao;
-
+/**
+ * Classe responsável por manipular a tabela T_FLO_INSTITUICAO_CURSO
+ * @author Denis Brian Canola
+ * @version 1.0
+ * @since 1.0
+ * @see br.com.flook.beans.InstituicaoCurso
+ * @see br.com.flook.bo.InstituicaoCursoBO
+ */
 public class InstituicaoCursoDAO {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
-	
+	/**
+	* Construtor responsável por abrir a conexão
+	* @throws Exception Exceção checked SQLException
+	* @author Denis Brian Canola
+	*/
 	public InstituicaoCursoDAO() throws Exception{
 		con = Conexao.conectar();
 	}
-	
+	/**
+	 * Busca uma tuba na tabela T_FLO_INSTITUICAO_CURSO pelo nome do Curso
+	 * @param nome Este parâmetro refere-se ao nome do Curso
+	 * @return retorna uma lista de objetosInstituicaoCurso se encontrado
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public List<InstituicaoCurso> obter(String nome) throws Exception{
 		String _sql = "SELECT \r\n" + 
 				"    T3.IMG_INSTITUICAO,\r\n" + 
@@ -61,7 +78,11 @@ public class InstituicaoCursoDAO {
 		}	
 		return ics;
 	}
-
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception {
 		con.close();
 	}
