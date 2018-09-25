@@ -8,12 +8,24 @@ import java.util.List;
 
 import br.com.flook.beans.Endereco;
 import br.com.flook.conexao.Conexao;
-
+/**
+ * Classe responsável por manipular a tabela T_FLO_ENDERECO
+ * @author Denis Brian Canola
+ * @version 1.0
+ * @since 1.0
+ * @see br.com.flook.beans.Endereco
+ * @see br.com.flook.bo.EnderecoBO
+ */
 public class EnderecoDAO {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
 	
+	/**
+	 * Construtor responsável por abrir a conexão
+	 * @throws Exception Exceção checked SQLException
+	 * @author Denis Brian Canola
+	 */
 	public EnderecoDAO() throws Exception{
 		con = Conexao.conectar();
 	}
@@ -22,6 +34,13 @@ public class EnderecoDAO {
 		con = _con;
 	}
 	
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_ENDERECO
+	 * @param obj Este parâmetro representa um objeto Endereco beans
+	 * @return retorna um Int com codigo 0
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public int gravar(Endereco obj) throws Exception{
 		String _sql = "INSERT INTO T_FLO_ENDERECO (NM_BAIRRO, NR_CEP, NM_CIDADE, NM_COMPLEMENTO, SG_ESTADO, DS_LOGRADOURO, NR_ENDERECO) VALUES(?,?,?,?,?,?,?)";
 		
@@ -45,7 +64,14 @@ public class EnderecoDAO {
 		
 		return cod;
 	}
-
+	
+	/**
+	 * Busca uma tuba na tabela T_FLO_ENDERECO pelo código
+	 * @param cod Este parâmetro refere-se ao Id do objeto Endereco beans
+	 * @return retorna o objeto Endereco beans se encontrado
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public Endereco obter(int cod) throws Exception {
 		String _sql = "SELECT\r\n" + 
 				"    CD_ENDERECO,\r\n" + 
@@ -76,6 +102,14 @@ public class EnderecoDAO {
 		
 		return obj;
 	}
+
+	/**
+	 * Busca uma tuba na tabela T_FLO_ENDERECO pela Intituicao
+	 * @param cod Este parâmetro refere-se ao atributo codigo do objeto Intituicao beans
+	 * @return retorna uma lista com os objetos Endereco encontrados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public List<Endereco> obterPorInstituicao(int cod) throws Exception{
 		String _sql = "SELECT\r\n" + 
 				"    CD_ENDERECO,\r\n" + 
@@ -113,6 +147,11 @@ public class EnderecoDAO {
 		return ends;	
 	}
 	
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception{
 		con.close();
 	}
