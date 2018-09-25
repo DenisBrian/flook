@@ -18,9 +18,9 @@ import br.com.flook.dao.InstituicaoCursoDAO;
  */
 public class InstituicaoCursoBO {
 	/**
-	 * Este método ira buscar as a instutuição pelo nome do curso.
-	 * @param nome Este parâmetro representa um objeto do Beans.
-	 * @return O método retorna lista com as intituições.
+	 * Este método ira buscar as a instutuição pelo nome do Curso.
+	 * @param nome Este parâmetro representa o nome do objeto Curso Beans.
+	 * @return O método retorna uma lista com as Instituições encontradas
 	 * @throws Exception Tratado a exceção checked SQLExceptio
 	 * @author DENIS BRIAN CANOLA
 	 */
