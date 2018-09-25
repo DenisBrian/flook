@@ -11,7 +11,7 @@
 <%@ include file="menu.jsp"%>
   <div class="container">
     <div class="container-course text-center">
-     <a class="pr-4" href="procurarCurso.html"><img src="./images/back.png" width="17" height="17" alt="">Voltar</a><h3>FIAP - Análise e Desenvolvimento de Sistemas</h3>
+     <a class="pr-4" href="procurarCurso.jsp"><img src="./images/back.png" width="17" height="17" alt="">Voltar</a><h3>FIAP - Análise e Desenvolvimento de Sistemas</h3>
       <hr class="my-4">
     </div>
     <div class="row">
@@ -62,7 +62,7 @@
               <hr class="my-1">
               <a href=""><i class="far fa-thumbs-up"></i></a><span>184</span>
               <a href=""><i class="far fa-thumbs-down"></i></a><span>48</span>
-              <button class="btn btn-standard"type="button" name="button"><a href="criarPergunta.html">Abrir Tópico</a></button>
+              <button class="btn btn-standard"type="button" name="button"><a href="criarPergunta.jsp">Abrir Tópico</a></button>
             </div>
           </div>
         </div>

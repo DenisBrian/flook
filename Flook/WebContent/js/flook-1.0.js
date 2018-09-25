@@ -1,7 +1,28 @@
 $(document).ready(function() {
+
+	// METHODS
+	var showChat = function(open) {
+		if (open) {
+			sessionStorage.setItem("janela", "aberta");
+			$('.chatbot').css('visibility', 'hidden');
+			$('#live-chat').css('visibility', 'visible');
+			$("#inpChatbot").focus();
+			$('#chatHistory').scrollTop($('#chatHistory')[0].scrollHeight);
+		} else {
+			sessionStorage.setItem("janela", "fechada");
+			$('.chatbot').css('visibility', 'visible');
+			$('#live-chat').css('visibility', 'hidden');
+		}
+	}
+	var clickOptionBot = function(value){
+		$("#inpChatbot").val(value.toString());
+		$("#formChatbot").submit();
+	}
+	// EVENTS
 	
-	$('#live-chat').css('visibility', 'visible');
-	$('#chatHistory').scrollTop($('#chatHistory')[0].scrollHeight);
+	$('.chat-option').click(function(event){
+		clickOptionBot(event.target.innerText);
+	});
 	
 	$('.btn-backTop').click(function(event) {
 		event.preventDefault();
@@ -11,13 +32,13 @@ $(document).ready(function() {
 	});
 
 	$('.chatbot').click(function() {
-		$('.chatbot').css('visibility', 'hidden');
-		$('#live-chat').css('visibility', 'visible');
+		showChat(true);
+		$("#formChatbot").submit();
 	});
 
 	$('.chat-close').click(function() {
-		$('.chatbot').css('visibility', 'visible');
-		$('#live-chat').css('visibility', 'hidden');
+		showChat(false);
+		$("#idStart").val("");
 	});
 
 	$("#btnEntrar").click(function() {
@@ -36,12 +57,15 @@ $(document).ready(function() {
 	});
 
 	$("#inpChatbot").keyup(function(e) {
-		if(e.value.length == 0)
+		if (e.value.length == 0)
 			return false;
-		
+
 		if (e.keyCod == 13)
-			$.post("botServlet",$("#formChatbot").serialize());
-		
+			$("#formChatbot").submit();
+
 	});
-	
+
+	if (sessionStorage.getItem("janela") == "aberta") {
+		showChat(true);
+	}
 });

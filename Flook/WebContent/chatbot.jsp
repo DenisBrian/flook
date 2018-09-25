@@ -13,14 +13,16 @@
 	<div class="chat">
 		<div id="chatHistory" class="chat-history">
 			<c:forEach items="${ items }" var="item">
-				<hr class="my-1">
-				<div class="chat-message mt-3 mb-3 clearfix">
-					<img src="images/user.png" alt="" width="32" height="32">
-					<div class="chat-message-content clearfix">
-						<h5>Usuario</h5>
-						<p>${ item.key }</p>
+				<c:if test="${ item.key != ''}">
+					<hr class="my-1">
+					<div class="chat-message mt-3 mb-3 clearfix">
+						<img src="images/user.png" alt="" width="32" height="32">
+						<div class="chat-message-content clearfix">
+							<h5>Usuario</h5>
+							<p>${ item.key }</p>
+						</div>
 					</div>
-				</div>
+				</c:if>
 				<hr class="my-1">
 				<div class="chat-message mt-3 mb-3 clearfix">
 					<img src="images/bot.png" alt="" width="32" height="32">
@@ -35,7 +37,7 @@
 			<fieldset>
 				<input id="inpChatbot" name="pergunta" type="text"
 					placeholder="Digite a sua mensagem…" autocomplete="off" autofocus>
-				<input type="hidden">
+				<input id="idStart" name="start" value="${ start }" type="hidden">
 			</fieldset>
 		</form>
 	</div>
