@@ -11,6 +11,7 @@
 		<h4>Flook Bot</h4>
 	</header>
 	<div class="chat">
+<<<<<<< HEAD
 		<div id="chatHistory" class="chat-history">
 			<c:forEach items="${ items }" var="item">
 				<hr class="my-1">
@@ -20,6 +21,15 @@
 						<h5>Usuario</h5>
 						<p>${ item.key }</p>
 					</div>
+=======
+		<div class="chat-history">
+			<div class="chat-message mt-3 mb-3 clearfix">
+				<img src="images/bot.png" alt="" width="32" height="32">
+				<div class="chat-message-content clearfix">
+					<h5>Flook Bot</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Error, explicabo quasi ratione odio dolorum harum.</p>
+>>>>>>> branch 'master' of https://github.com/DenisBrian/flook.git
 				</div>
 				<hr class="my-1">
 				<div class="chat-message mt-3 mb-3 clearfix">
