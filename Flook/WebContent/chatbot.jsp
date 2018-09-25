@@ -8,7 +8,7 @@
 <div id="live-chat">
 	<header class="clearfix">
 		<a class="chat-close">x</a>
-		<h4>Flook Bot</h4>
+		<h4>Assistente Virtual</h4>
 	</header>
 	<div class="chat">
 		<div id="chatHistory" class="chat-history">

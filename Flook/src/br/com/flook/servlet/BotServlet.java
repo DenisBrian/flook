@@ -18,7 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.ibm.watson.developer_cloud.conversation.v1.Conversation;
 import com.ibm.watson.developer_cloud.conversation.v1.model.DialogNodeOutputOptionsElement;
 import com.ibm.watson.developer_cloud.conversation.v1.model.DialogRuntimeResponseGeneric;
+import com.ibm.watson.developer_cloud.conversation.v1.model.ExampleCollection;
 import com.ibm.watson.developer_cloud.conversation.v1.model.InputData;
+import com.ibm.watson.developer_cloud.conversation.v1.model.ListExamplesOptions;
 import com.ibm.watson.developer_cloud.conversation.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.conversation.v1.model.MessageRequest;
 import com.ibm.watson.developer_cloud.conversation.v1.model.MessageResponse;
@@ -58,8 +60,12 @@ public class BotServlet extends HttpServlet {
 		Map context = new HashMap();
 
 		String pergunta = request.getParameter("pergunta");
-		resp = conversationAPI(pergunta, context);
-
+		
+		String workspaceId = "34349454-2196-4471-8736-fb0d42979888";
+		Conversation service = WatsonIBM();
+		
+		resp = conversationAPI(service,workspaceId ,pergunta, context);
+		
 		String resposta = resp.getOutput().getText().get(0);
 		
 		List<DialogRuntimeResponseGeneric> dialogs = resp.getOutput().getGeneric();
@@ -67,9 +73,7 @@ public class BotServlet extends HttpServlet {
 		for (DialogRuntimeResponseGeneric dialog : dialogs) {
 			
 			char t = dialog.getResponseType().charAt(0);
-			if (t == 'o') {
-				resposta += "<p>" + dialog.getTitle() + "</p>";
-				
+			if (t == 'o') {			
 				for(DialogNodeOutputOptionsElement option: dialog.getOptions()) {
 					resposta +=  "<p>" + option.getLabel() + "</p>";					
 				}				
@@ -84,17 +88,22 @@ public class BotServlet extends HttpServlet {
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
-	public static MessageResponse conversationAPI(String input, Map context) {
-		Conversation service = new Conversation("2018-08-08");
+	public static Conversation WatsonIBM() {
+		Conversation service = new Conversation("2018-08-09");
 		service.setUsernameAndPassword("7882e3d3-ae6e-4e5a-bbed-cb35427fdf51", "2hmrrVvERh6z");
+		
+		return service;
+	}
+	public static MessageResponse conversationAPI(Conversation service, String workspaceId, String input, Map context) {
+		
 		InputData inputData = new InputData.Builder().text(input).build();
+		
 		MessageRequest newMessage = new MessageRequest();
 		newMessage.setInput(inputData);
-		String workspaceId = "34349454-2196-4471-8736-fb0d42979888";
+		
 		MessageOptions options = new MessageOptions.Builder(workspaceId).input(inputData).build();
 		MessageResponse response = service.message(options).execute();
 		System.out.println(response);
 		return response;
 	}
-
 }
