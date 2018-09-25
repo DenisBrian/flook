@@ -15,7 +15,7 @@
 			<c:forEach items="${ items }" var="item">
 				<hr class="my-1">
 				<div class="chat-message mt-3 mb-3 clearfix">
-					<img src="images/bot.png" alt="" width="32" height="32">
+					<img src="images/user.png" alt="" width="32" height="32">
 					<div class="chat-message-content clearfix">
 						<h5>Usuario</h5>
 						<p>${ item.key }</p>
@@ -23,7 +23,7 @@
 				</div>
 				<hr class="my-1">
 				<div class="chat-message mt-3 mb-3 clearfix">
-					<img src="images/user.png" alt="" width="32" height="32">
+					<img src="images/bot.png" alt="" width="32" height="32">
 					<div class="chat-message-content clearfix">
 						<h5>Sr. Robot</h5>
 						${ item.value }
