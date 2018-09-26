@@ -37,7 +37,7 @@ public class EnderecoDAO {
 	/**
 	 * Adiciona uma tuba na tabela T_FLO_ENDERECO
 	 * @param obj Este parâmetro representa um objeto Endereco beans
-	 * @return retorna um Int com codigo 0
+	 * @return retorna um Int com codigo do Curso
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
 	 */

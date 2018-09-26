@@ -34,7 +34,7 @@ public class CursoDAO {
 	/**
 	 * Adiciona uma tuba na tabela T_FLO_CURSO
 	 * @param obj Este parâmetro representa um objeto Curso beans
-	 * @return retorna um Int com codigo 0
+	 * @return retorna um Int com codigo do Curso
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
 	 */
