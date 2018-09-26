@@ -30,7 +30,7 @@ public class CatalogoDAO {
 	/**
 	 * Adiciona uma tuba na tabela T_FLO_CATALOGO
 	 * @param obj Este parâmetro recebe um objeto Catalogo beans
-	 * @return retorna um Int com codigo 0
+	 * @return retorna um Int com codigo do curso
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
 	 */
