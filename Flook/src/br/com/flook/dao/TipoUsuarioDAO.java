@@ -27,7 +27,7 @@ public class TipoUsuarioDAO {
 		con = Conexao.conectar();
 	}
 	/**
-	 * Adiciona uma tubla na tabela T_FLO_TIPO_USUARIO
+	 * Adiciona uma tupla na tabela T_FLO_TIPO_USUARIO
 	 * @param obj Este parâmetro representa um objeto TipoUsuario beans
 	 * @return retorna um Int com codigo do TipoUsuario
 	 * @throws Exception Exceção checked SQLExption
@@ -52,7 +52,7 @@ public class TipoUsuarioDAO {
 		return cod;
 	}
 	/**
-	 * Busca uma tubla na tabela T_FLO_TIPO_USUARIO pelo codigo
+	 * Busca uma tupla na tabela T_FLO_TIPO_USUARIO pelo codigo
 	 * @param cod Este parâmetro refere-se ao codigo da Instituicao
 	 * @return retorna o objeto Instituicao se encontrado
 	 * @throws Exception Exceção checked SQLExption
