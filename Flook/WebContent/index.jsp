@@ -12,8 +12,7 @@
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
 			<h2 class="text-center">Flook</h2>
-			<p class="lead text-center">Lorem ipsum dolor sit amet,
-				consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+			<p class="lead text-center">A sua página de pesquisa de curso</p>
 			<hr class="my-4">
 			<div class="container">
 				<div class="input-group text-center">
@@ -51,27 +50,21 @@
 			<div class="card-body">
 				<h3 class="card-title-1">Procure um curso</h3>
 				<hr class="my-2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-					enim ad minim veniam, quis nostrud exercitation .</p>
+				<p>Os cursos já cadastrados na nossa plataforma são ideais para pessoas que estão buscando conhecer mais sobre determinada carreira , em apenas algum clicks você pode pesquisar um curso.</p>
 			</div>
 		</div>
 		<div class="card col-md-7">
 			<div class="card-body">
 				<h3 class="card-title-2">Leia e avalie</h3>
 				<hr class="my-2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-					enim ad minim veniam, quis nostrud exercitation .</p>
+				<p>Em nossa página nós nos importamos com sua classificação, os cursos possuem um sistema de avaliação que mostra de forma interativa os cursos com maior numero de joinhas.</p>
 			</div>
 		</div>
 		<div class="card col-md-7">
 			<div class="card-body">
 				<h3 class="card-title-3">Participe do fórum</h3>
 				<hr class="my-2">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-					enim ad minim veniam, quis nostrud exercitation .</p>
+				<p>O forum de discussão é um lugar para solucionar as suas dúvidas, basicamente, possuem duas divisões a primeira faz a divisão por curso. A segunda, uma divisão desse em tópicos.</p>
 			</div>
 		</div>
 	</div>
