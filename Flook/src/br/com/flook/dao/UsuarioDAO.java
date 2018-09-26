@@ -61,7 +61,7 @@ public class UsuarioDAO {
 	/**
 	 * Adiciona uma tuba na tabela T_FLO_USUARIO
 	 * @param cod Este parâmetro é o codigo do Usuario
-	 * @return retorna um objeto Usuario se encontrado
+	 * @return retorna um objeto Usuario se encontrado.
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
 	 */
