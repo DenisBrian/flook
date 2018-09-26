@@ -18,6 +18,34 @@ $(document).ready(function() {
 		$("#inpChatbot").val(value.toString());
 		$("#formChatbot").submit();
 	}
+	
+	var classInput = "is-invalid";
+
+	// Regexs
+	function EmailValidation(emailAddress) {
+	  var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	  return regex.test(emailAddress);
+	}
+
+	function NameValidation(name) {
+	  var regex = /^[a-zA-Z ]{2,30}$/;
+	  return regex.test(name);
+	}
+
+	function PasswordValidation(pass) {
+	  var regex =  /^[a-zA-Z0-9.\-_$@*!]{6,30}$/;
+	  return regex.test(pass);
+	}
+
+	var classField = function(field, css,remove){
+	  if(remove){
+	    $(field).removeClass(css);
+	  }
+	  else {
+	    $(field).addClass(css);
+	  }
+	}
+
 	// EVENTS
 	
 	$('.chat-option').click(function(event){
@@ -68,4 +96,54 @@ $(document).ready(function() {
 	if (sessionStorage.getItem("janela") == "aberta") {
 		showChat(true);
 	}
+	
+	$('.btn-cadastro').click(function() {
+		  var userName = $('#name');
+		  var name = NameValidation(userName.val().trim());
+		  if (name == false) {
+		    classField(userName, classInput, false);
+		  }else {
+		    classField(userName, classInput, true);
+		  }
+
+		  var emailAdress = $('#email');
+		  var email = EmailValidation(emailAdress.val().trim());
+		  if (email == false) {
+		    classField(emailAdress, classInput, false);
+		  }else {
+		    classField(emailAdress, classInput, true);
+		  }
+
+
+		  var userPass = $('#password');
+		  var confPass = $('#conPassword');
+		  var pass = PasswordValidation(userPass.val());
+		  if (pass == false) {
+		    classField(userPass, classInput, false);
+		  }else {
+		    classField(userPass, classInput, true);
+		  }
+
+		  if (userPass.val() !== confPass.val()) {
+		    classField(confPass, classInput, false);
+		  }else {
+		    classField(confPass, classInput, true);
+		  }
+
+		  var date = $('#age');
+		  if (date.val() == "") {
+		    classField(date, classInput, false);
+		  }else {
+		    classField(date, classInput, true);
+		  }
+
+		  var selectBox = $("#escolaridade");
+		  if (selectBox.val() == "" || selectBox.val() == null) {
+		    classField(selectBox, classInput, false);
+		  }else {
+		    classField(selectBox, classInput, true);
+		  }
+
+		});
+
 });
