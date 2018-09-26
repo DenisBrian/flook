@@ -79,6 +79,44 @@ public class UsuarioDAO {
 		return obj;
 	}
 	
+	public Usuario obter(String email, String senha) throws Exception {
+		String _sql = "SELECT \r\n" + 
+				"    T2.CD_TIPO_USUARIO,\r\n" + 
+				"    T2.DS_TIPO_USUARIO,\r\n" + 
+				"    T1.CD_USUARIO,\r\n" + 
+				"    T1.TX_EMAIL,\r\n" + 
+				"    T1.TX_SENHA,\r\n" + 
+				"    T1.DT_NASCIMENTO,\r\n" + 
+				"    T1.QT_PONTO,\r\n" + 
+				"    T1.IMG_USUARIO\r\n" + 
+				"FROM T_FLO_USUARIO T1\r\n" + 
+				"INNER JOIN T_FLO_TIPO_USUARIO T2 ON T1.CD_TIPO_USUARIO = T2.CD_TIPO_USUARIO\r\n" + 
+				"WHERE T1.TX_EMAIL = ? AND T1.TX_SENHA = ?";
+		
+		ps = con.prepareStatement(_sql);
+		ps.setString(1, email);
+		ps.setString(2, senha);
+		
+		rs = ps.executeQuery();
+		
+		Usuario obj = new Usuario();
+		if(rs.next()) {
+			obj.setCodigo(rs.getInt("CD_USUARIO"));
+			obj.setEmail(rs.getString("TX_EMAIL"));			
+			obj.setSenha(rs.getString("TX_SENHA"));
+			
+			Calendar dt = new GregorianCalendar();
+			dt.setTime(rs.getDate("DT_NASCIMENTO"));
+			obj.setDataNascimento(dt);
+			
+			obj.setPontoAcumulado(rs.getInt("QT_PONTO"));
+			obj.setImagem(rs.getString("IMG_USUARIO"));
+			obj.setTipoUsuario(new TipoUsuario(rs.getInt("CD_TIPO_USUARIO"),rs.getString("DS_TIPO_USUARIO")));
+		}
+		
+		return obj;
+	}
+	
 	public void fechar() throws Exception{
 		con.close();
 	}

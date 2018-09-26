@@ -143,6 +143,9 @@ $(document).ready(function() {
 		  }else {
 		    classField(selectBox, classInput, true);
 		  }
+		  
+		  
+		  $("#formChatbot").submit();
 
 		});
 
