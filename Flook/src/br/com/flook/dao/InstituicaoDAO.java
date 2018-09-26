@@ -7,16 +7,33 @@ import java.sql.ResultSet;
 import br.com.flook.beans.Instituicao;
 import br.com.flook.conexao.Conexao;
 import br.com.flook.dao.EnderecoDAO;
-
+/**
+ * Classe responsável por manipular a tabela T_FLO_INSTITUICAO
+ * @author Denis Brian Canola
+ * @version 1.0
+ * @since 1.0
+ * @see br.com.flook.beans.Instituicao
+ * @see br.com.flook.bo.InstituicaoBO
+ */
 public class InstituicaoDAO {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
-
+	/**
+	* Construtor responsável por abrir a conexão
+	* @throws Exception Exceção checked SQLException
+	* @author Denis Brian Canola
+	*/
 	public InstituicaoDAO() throws Exception {
 		con = Conexao.conectar();
 	}
-
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_INSTITUICAO
+	 * @param obj Este parâmetro representa um objeto Instituicao beans
+	 * @return retorna um Int com codigo do Instituicao
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public int gravar(Instituicao obj) throws Exception {
 		String _sql = "INSERT INTO T_FLO_INSTITUICAO(NM_INSTITUICAO,DS_TIPO_INSTITUICAO,DS_INSTITUICAO,IMG_INSTITUICAO) VALUES (?,?,?,?)";
 
@@ -40,7 +57,14 @@ public class InstituicaoDAO {
 
 		return cod;
 	}
-
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_INSTITUICAO
+	 * @param instituicao Este parâmetro é o codigo da Instituicao
+	 * @param endereco Este parâmetro é o codigo do Endereco
+	 * @return retorna um valor booleano
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public boolean gravar(int instituicao, int endereco) throws Exception {
 		String _sql = "INSERT INTO T_FLO_INSTITUICAO_UNIDADE(CD_INSTITUICAO,CD_ENDERECO) VALUES (?,?)";
 
@@ -50,7 +74,13 @@ public class InstituicaoDAO {
 
 		return ps.execute();
 	}
-
+	/**
+	 * Busca uma tuba na tabela T_FLO_INSTITUICAO pelo codigo
+	 * @param nome Este parâmetro refere-se ao codigo da Instituicao
+	 * @return retorna o objeto Instituicao se encontrado
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public Instituicao obter(int cod) throws Exception {
 		String _sql = "SELECT\r\n" + "    CD_INSTITUICAO,\r\n" + "    NM_INSTITUICAO,\r\n"
 				+ "    DS_TIPO_INSTITUICAO,\r\n" + "    DS_INSTITUICAO,\r\n" + "    IMG_INSTITUICAO\r\n"
@@ -75,7 +105,11 @@ public class InstituicaoDAO {
 
 		return obj;
 	}
-
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception {
 		con.close();
 	}
