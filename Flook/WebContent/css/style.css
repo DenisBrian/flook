@@ -490,6 +490,10 @@ i{
   margin: 0;
 }
 
+.recentTopics {
+  padding-bottom: 1.3em;
+}
+
 .recentTopics p{
   line-height: 2em;
 }
