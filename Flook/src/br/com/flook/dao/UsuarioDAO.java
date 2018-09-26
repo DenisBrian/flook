@@ -9,16 +9,33 @@ import java.util.GregorianCalendar;
 import br.com.flook.beans.TipoUsuario;
 import br.com.flook.beans.Usuario;
 import br.com.flook.conexao.Conexao;
-
+/**
+ * Classe responsável por manipular a tabela T_FLO_USUARIO
+ * @author Denis Brian Canola
+ * @version 1.0
+ * @since 1.0
+ * @see br.com.flook.beans.Usuario
+ * @see br.com.flook.bo.UsuarioBO
+ */
 public class UsuarioDAO {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
-	
+	/**
+	* Construtor responsável por abrir a conexão
+	* @throws Exception Exceção checked SQLException
+	* @author Denis Brian Canola
+	*/
 	public UsuarioDAO() throws Exception{
 		con = Conexao.conectar();
 	}
-	
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_USUARIO
+	 * @param obj Este parâmetro representa um objeto Usuario beans
+	 * @return retorna um Int com codigo do Usuario
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public int gravar(Usuario obj) throws Exception{
 		String _sql = "INSERT INTO T_FLO_USUARIO(CD_TIPO_USUARIO,TX_EMAIL,TX_SENHA,DT_NASCIMENTO,QT_PONTO,IMG_USUARIO) VALUES (?,?,?,?,?,?)";
 		
@@ -41,7 +58,13 @@ public class UsuarioDAO {
 		
 		return cod;				
 	}
-
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_USUARIO
+	 * @param cod Este parâmetro é o codigo do Usuario
+	 * @return retorna um objeto Usuario se encontrado
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public Usuario obter(int cod) throws Exception {
 		String _sql = "SELECT \r\n" + 
 				"    T2.CD_TIPO_USUARIO,\r\n" + 
@@ -78,7 +101,11 @@ public class UsuarioDAO {
 		
 		return obj;
 	}
-	
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception{
 		con.close();
 	}
