@@ -20,7 +20,7 @@ public class CatalogoDAO {
 	private ResultSet rs;
 	/**
 	 * Construtor responsável por abrir a conexão
-	 * @throws Exception Exceção checked SQLExceprion
+	 * @throws Exception Exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public CatalogoDAO() throws Exception{

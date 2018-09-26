@@ -27,12 +27,9 @@ public class UsuarioBO {
 
 	/**
 	 * Este método ira validar e repassar o objeto Usuario para a classe UsuarioDAO
-	 * 
-	 * @param obj
-	 *            Este parâmetro representa um objeto Usuario do Beans.
+	 * @param obj Este parâmetro representa um objeto Usuario do Beans.
 	 * @return O método retorna um codigo
-	 * @throws Exception
-	 *             Tratado a exceção checked SQLException
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static int novoUsuario(Usuario obj) throws Exception {
@@ -64,12 +61,9 @@ public class UsuarioBO {
 
 	/**
 	 * Este método ira buscar o Usuario pelo seu codigo
-	 * 
-	 * @param cod
-	 *            Este parâmetro representa o codigo do Usuario
+	 * @param cod Este parâmetro representa o codigo do Usuario
 	 * @return O método retorna um objeto Usuario se encontrado
-	 * @throws Exception
-	 *             Tratado a exceção checked SQLException
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static Usuario obterPorCodigo(int cod) throws Exception {

@@ -27,7 +27,7 @@ public class CertificadoDAO {
 	
 	/**
 	 * Construtor responsável por abrir a conexão
-	 * @throws Exception Exceção checked SQLExceprion
+	 * @throws Exception Exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public CertificadoDAO() throws Exception {

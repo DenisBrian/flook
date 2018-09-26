@@ -20,7 +20,7 @@ public class TipoUsuarioBO {
 	 * Este método ira pegar o tipo de usuario pelo codigo
 	 * @param cod Este parâmetro representa o codigo do TipoUsuario
 	 * @return O método retorna um objeto se encontrado
-	 * @throws Exception Tratado a exceção checked SQLExceptionn
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static TipoUsuario obterPorCodigo(int cod) throws Exception{
@@ -34,7 +34,7 @@ public class TipoUsuarioBO {
 	 * Este método ira validar e repassar o objeto TipoUsuario para a classe TipoUsuarioDAO
 	 * @param obj Este parâmetro representa um objeto TipoUsuario do Beans.
 	 * @return O método retorna um codigo
-	 * @throws Exception Tratado a exceção checked SQLExceptionn
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static int novoTipoUsuario(TipoUsuario obj) throws Exception{		
