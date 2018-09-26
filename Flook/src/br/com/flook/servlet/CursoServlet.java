@@ -71,8 +71,11 @@ public class CursoServlet extends HttpServlet {
 
 	public void carregarCurso(HttpServletRequest request) {
 		try {	
-			int codCurso = Integer.parseInt(request.getParameter("c").toString());
 			int codIns = Integer.parseInt(request.getParameter("f").toString());
+			int codCurso = Integer.parseInt(request.getParameter("c").toString());
+			
+			request.setAttribute("ic", InstituicaoCursoBO.obterPorInstituicaoCurso(codIns,codCurso));
+			
 		}
 		catch(Exception e) {
 			request.setAttribute("erro",Excecao.tratarExcecao(e));

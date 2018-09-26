@@ -37,15 +37,16 @@ public class UsuarioDAO {
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public int gravar(Usuario obj) throws Exception{
-		String _sql = "INSERT INTO T_FLO_USUARIO(CD_TIPO_USUARIO,TX_EMAIL,TX_SENHA,DT_NASCIMENTO,QT_PONTO,IMG_USUARIO) VALUES (?,?,?,?,?,?)";
+		String _sql = "INSERT INTO T_FLO_USUARIO(CD_TIPO_USUARIO,TX_NOME,TX_EMAIL,TX_SENHA,DT_NASCIMENTO,QT_PONTO,IMG_USUARIO) VALUES (?,?,?,?,?,?,?)";
 		
 		ps = con.prepareStatement(_sql, new String[] {"CD_USUARIO"});
 		ps.setInt(1, obj.getTipoUsuario().getCodigo());
-		ps.setString(2, obj.getEmail());
-		ps.setString(3, obj.getSenha());
-		ps.setDate(4, new java.sql.Date(obj.getDataNascimento().getTimeInMillis()));
-		ps.setInt(5, obj.getPontoAcumulado());
-		ps.setString(6, obj.getImagem());
+		ps.setString(2, obj.getNome());
+		ps.setString(3, obj.getEmail());
+		ps.setString(4, obj.getSenha());
+		ps.setDate(5, new java.sql.Date(obj.getDataNascimento().getTimeInMillis()));
+		ps.setInt(6, obj.getPontoAcumulado());
+		ps.setString(7, obj.getImagem());
 		
 		int affectedRows = ps.executeUpdate();
 		int cod = 0;
@@ -70,6 +71,7 @@ public class UsuarioDAO {
 				"    T2.CD_TIPO_USUARIO,\r\n" + 
 				"    T2.DS_TIPO_USUARIO,\r\n" + 
 				"    T1.CD_USUARIO,\r\n" + 
+				"    T1.TX_NOME,\r\n" + 
 				"    T1.TX_EMAIL,\r\n" + 
 				"    T1.TX_SENHA,\r\n" + 
 				"    T1.DT_NASCIMENTO,\r\n" + 
@@ -87,6 +89,7 @@ public class UsuarioDAO {
 		Usuario obj = new Usuario();
 		if(rs.next()) {
 			obj.setCodigo(rs.getInt("CD_USUARIO"));
+			obj.setNome(rs.getString("TX_NOME"));	
 			obj.setEmail(rs.getString("TX_EMAIL"));			
 			obj.setSenha(rs.getString("TX_SENHA"));
 			
@@ -111,6 +114,7 @@ public class UsuarioDAO {
 				"    T2.CD_TIPO_USUARIO,\r\n" + 
 				"    T2.DS_TIPO_USUARIO,\r\n" + 
 				"    T1.CD_USUARIO,\r\n" + 
+				"    T1.TX_NOME,\r\n" + 
 				"    T1.TX_EMAIL,\r\n" + 
 				"    T1.TX_SENHA,\r\n" + 
 				"    T1.DT_NASCIMENTO,\r\n" + 
@@ -129,6 +133,7 @@ public class UsuarioDAO {
 		Usuario obj = new Usuario();
 		if(rs.next()) {
 			obj.setCodigo(rs.getInt("CD_USUARIO"));
+			obj.setNome(rs.getString("TX_NOME"));
 			obj.setEmail(rs.getString("TX_EMAIL"));			
 			obj.setSenha(rs.getString("TX_SENHA"));
 			

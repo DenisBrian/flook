@@ -14,7 +14,7 @@
       <div class="text-center">
         <a><i class="fas fa-camera  mr-2 camera-icon mx-auto" data-toggle="modal" data-target=".profileImage"></i></a>
         <img  class="rounded-circle mx-auto"src="./images/user.png" alt="" width="110" height="110">
-        <a href=""><h5 class="name mt-4">  <i class="fas fa-pencil-alt pencil-icon mr-2"></i></a>Thais Araújo da Silva</h5>
+        <a href=""><h5 class="name mt-4">  <i class="fas fa-pencil-alt pencil-icon mr-2"></i></a>${ usuario.nome }</h5>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@
         <h5 class="text-center text-center mb-1"><i class="far fa-clipboard fa4"></i>Pontuação</h5>
         <ul class="list-group list-group-flush">
           <li class="list-group-item mt-3 text-center">
-            Atualmente você possui <span class="points">XX</span> pontos!</li>
+            Atualmente você possui <span class="points">${ usuario.pontoAcumulado }</span> pontos!</li>
             <li class="list-group-item text-center">
               Posição no ranking:<span class="position"> 1000</span> </li>
             </ul>

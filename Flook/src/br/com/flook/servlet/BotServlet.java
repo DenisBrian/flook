@@ -110,7 +110,7 @@ public class BotServlet extends HttpServlet {
 	public static Conversation WatsonIBM() {
 		Conversation service = new Conversation("2018-09-20");
 		service.setUsernameAndPassword("7882e3d3-ae6e-4e5a-bbed-cb35427fdf51", "2hmrrVvERh6z");
-
+		service.setEndPoint("https://gateway.watsonplatform.net/conversation/api");
 		return service;
 	}
 

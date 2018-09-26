@@ -10,12 +10,13 @@ public class Usuario {
 	private Calendar dataNascimento;
 	private int pontoAcumulado;
 	private String imagem;
+	private String nome;
 
 	public Usuario() {
 		super();
 	}
 	public Usuario(int codigo, TipoUsuario tipoUsuario, String email, String senha, Calendar dataNascimento,
-			int pontoAcumulado, String imagem) {
+			int pontoAcumulado, String imagem,String nome) {
 		super();
 		setCodigo(codigo);
 		setTipoUsuario(tipoUsuario);
@@ -24,6 +25,7 @@ public class Usuario {
 		setDataNascimento(dataNascimento);
 		setPontoAcumulado(pontoAcumulado);
 		setImagem(imagem);
+		setNome(nome);
 	}
 
 	public int getCodigo() {
@@ -72,8 +74,16 @@ public class Usuario {
 	public void setImagem(String imagem) {
 		this.imagem = imagem;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
 	public void setAll(int codigo, TipoUsuario tipoUsuario, String email, String senha, Calendar dataNascimento,
-			int pontoAcumulado, String imagem) {
+			int pontoAcumulado, String imagem, String nome) {
 		setCodigo(codigo);
 		setTipoUsuario(tipoUsuario);
 		setEmail(email);
@@ -81,6 +91,7 @@ public class Usuario {
 		setDataNascimento(dataNascimento);
 		setPontoAcumulado(pontoAcumulado);
 		setImagem(imagem);
+		setNome(nome);
 	}
 	
 	public String getAll() {
@@ -95,11 +106,12 @@ public class Usuario {
 			tipo = getTipoUsuario().getAll();
 			
 		return "Codigo: " + getCodigo()  + "\n" +
-				"Tipo de Usuário: " + tipo  + "\n"+
+				"Tipo de Usuï¿½rio: " + tipo  + "\n"+
 	           "Email: " + getEmail() + "\n" +
 			   "Senha: " + getSenha() + "\n" +
 	           "Data Nascimento: " + data + "\n" +
 	           "Imagem: " + getImagem() + "\n" +
-	           "Pontos acumulados: " + getPontoAcumulado() ;
+	           "Pontos acumulados: " + getPontoAcumulado() +
+	           "Nome: " + getNome();
 	}
 }
