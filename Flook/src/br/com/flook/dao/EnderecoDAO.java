@@ -30,6 +30,11 @@ public class EnderecoDAO {
 		con = Conexao.conectar();
 	}
 	
+	/**
+	 * Construtor responsável por abrir conexão por parametro
+	 * @throws Exception Exceção checked SQLException
+	 * @author Denis Brian Canola
+	 */
 	public EnderecoDAO(Connection _con) throws Exception{
 		con = _con;
 	}

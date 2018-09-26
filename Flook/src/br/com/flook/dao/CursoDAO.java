@@ -87,7 +87,7 @@ public class CursoDAO {
 		return obj;
 	}
 	
-		/**
+	/**
 	 * Busca uma tubla na tabela T_FLO_CURSO pelo atributo nome 
 	 * @param nome Este parâmetro refere-se ao atributo nome do objeto Curso beans
 	 * @return retorna uma lista com os Curso encontrados.

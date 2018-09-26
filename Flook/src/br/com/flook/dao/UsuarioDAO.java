@@ -148,7 +148,11 @@ public class UsuarioDAO {
 		
 		return obj;
 	}
-	
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception{
 		con.close();
 	}
