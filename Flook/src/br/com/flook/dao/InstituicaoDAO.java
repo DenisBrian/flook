@@ -76,7 +76,7 @@ public class InstituicaoDAO {
 	}
 	/**
 	 * Busca uma tuba na tabela T_FLO_INSTITUICAO pelo codigo
-	 * @param nome Este parâmetro refere-se ao codigo da Instituicao
+	 * @param cod Este parâmetro refere-se ao codigo da Instituicao
 	 * @return retorna o objeto Instituicao se encontrado
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA

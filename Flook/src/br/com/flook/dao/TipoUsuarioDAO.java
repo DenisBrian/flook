@@ -6,16 +6,33 @@ import java.sql.ResultSet;
 
 import br.com.flook.beans.TipoUsuario;
 import br.com.flook.conexao.Conexao;
-
+/**
+ * Classe responsável por manipular a tabela T_FLO_TIPO_USUARIO
+ * @author Denis Brian Canola
+ * @version 1.0
+ * @since 1.0
+ * @see br.com.flook.beans.TipoUsuario
+ * @see br.com.flook.bo.TipoUsuarioBO
+ */
 public class TipoUsuarioDAO {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
-	
+	/**
+	* Construtor responsável por abrir a conexão
+	* @throws Exception Exceção checked SQLException
+	* @author Denis Brian Canola
+	*/
 	public TipoUsuarioDAO() throws Exception{
 		con = Conexao.conectar();
 	}
-	
+	/**
+	 * Adiciona uma tuba na tabela T_FLO_TIPO_USUARIO
+	 * @param obj Este parâmetro representa um objeto TipoUsuario beans
+	 * @return retorna um Int com codigo do TipoUsuario
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public int gravar(TipoUsuario obj) throws Exception{
 		String _sql = "INSERT INTO T_FLO_TIPO_USUARIO (DS_TIPO_USUARIO) VALUES (?)";
 		
@@ -34,7 +51,13 @@ public class TipoUsuarioDAO {
 		
 		return cod;
 	}
-	
+	/**
+	 * Busca uma tuba na tabela T_FLO_TIPO_USUARIO pelo codigo
+	 * @param cod Este parâmetro refere-se ao codigo da Instituicao
+	 * @return retorna o objeto Instituicao se encontrado
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public TipoUsuario obter(int cod) throws Exception{
 		String _sql = "SELECT CD_TIPO_USUARIO, DS_TIPO_USUARIO FROM T_FLO_TIPO_USUARIO WHERE CD_TIPO_USUARIO = ?";
 		
@@ -52,7 +75,11 @@ public class TipoUsuarioDAO {
 		
 		return obj;
 	}
-
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception{
 		con.close();
 	}
