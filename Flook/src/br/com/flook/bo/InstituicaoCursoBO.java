@@ -36,4 +36,12 @@ public class InstituicaoCursoBO {
 		dao.fechar();
 		return ics;
 	}
+	
+	
+	public static InstituicaoCurso obterPorInstituicaoCurso(int codInstituicao, int codCurso) throws Exception{		
+		InstituicaoCursoDAO dao = new InstituicaoCursoDAO();
+		InstituicaoCurso ic = dao.obter(codInstituicao,codCurso);
+		dao.fechar();
+		return ic;
+	}
 }

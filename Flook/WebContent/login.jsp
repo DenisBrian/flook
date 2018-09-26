@@ -25,9 +25,7 @@
 					</div>
 					<input name="acao" value="logar" type="hidden">
 					<div class="text-center">
-						<button type="submit" class="btn btn-standard">
-							Entrar
-						</button>
+						<button type="submit" class="btn btn-standard">Entrar</button>
 						<div class="mt-3">
 							<a href="./cadastrar.jsp">Não possui conta?</a> <span>-</span> <a
 								href="./esqueceuSenha.jsp">Esqueci a senha</a>
@@ -36,7 +34,11 @@
 				</form>
 
 				<c:if test="${ invalido == 's' }">
-					<div class="alert alert-warning" role="alert">E-mail ou Senha não foi localizado!!</div>
+					<div class="alert alert-warning" role="alert">E-mail ou Senha
+						não foi localizado!!</div>
+				</c:if>
+				<c:if test="${ cadastro == 's' }">
+					<div class="alert alert-success" role="alert">Cadastro realizado com sucesso !!</div>
 				</c:if>
 			</div>
 		</div>

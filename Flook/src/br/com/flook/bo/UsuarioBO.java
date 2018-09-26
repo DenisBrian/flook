@@ -36,7 +36,10 @@ public class UsuarioBO {
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static int novoUsuario(Usuario obj) throws Exception {
-
+		
+		if(obj.getNome().length() > 100)
+			return 0;
+		
 		if (obj.getEmail().length() == 0 || obj.getEmail().length() > 50)
 			return 0;
 

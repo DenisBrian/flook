@@ -1,29 +1,42 @@
 package br.com.flook.beans;
 
 public class InstituicaoCurso {
-	private boolean bolsa;
-	private Instituicao instituicao;
 	private Curso curso;
-	private float valor;
-	private float duracao;
+	private Instituicao instituicao;
 	private float mec;
+	private float duracao;
 	private String tipoCurso;
+	private boolean bolsa;
+	private float valor;
+	private int like;
+	private int dislike;
+	private String video;
+	private String descricao;
+	private String planoCarreira;
+
+	
 	
 	public InstituicaoCurso() {
 		super();
 	}
 
-	public InstituicaoCurso(float valor, boolean bolsa, Instituicao instituicao, Curso curso, float mec, float duracao,String tipoCurso) {
+	public InstituicaoCurso(Curso curso, Instituicao instituicao, float mec, float duracao, String tipoCurso,
+			boolean bolsa, float valor, int like, int dislike, String video, String descricao, String planoCarreira) {
 		super();
-		setValor(valor);
-		setBolsa(bolsa);
-		setInstituicao(instituicao);
 		setCurso(curso);
+		setInstituicao(instituicao);
 		setMec(mec);
 		setDuracao(duracao);
 		setTipoCurso(tipoCurso);
+		setBolsa(bolsa);
+		setValor(valor);
+		setLike(like);
+		setDislike(dislike);
+		setVideo(video);
+		setDescricao(descricao);
+		setPlanoCarreira(planoCarreira);
 	}
-	
+		
 	public float getValor() {
 		return valor;
 	}
@@ -71,20 +84,51 @@ public class InstituicaoCurso {
 		this.tipoCurso = tipoCurso;
 	}
 	
-	public void setAll(float valor, boolean bolsa, Instituicao instituicao, Curso curso, float mec, float duracao, String tipoCurso) {
-		setValor(valor);
-		setBolsa(bolsa);
-		setInstituicao(instituicao);
-		setCurso(curso);
-		setMec(mec);
-		setDuracao(duracao);
-		setTipoCurso(tipoCurso);
+	public int getLike() {
+		return like;
 	}
+
+	public void setLike(int like) {
+		this.like = like;
+	}
+
+	public int getDislike() {
+		return dislike;
+	}
+
+	public void setDislike(int dislike) {
+		this.dislike = dislike;
+	}
+
+	public String getVideo() {
+		return video;
+	}
+
+	public void setVideo(String video) {
+		this.video = video;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getPlanoCarreira() {
+		return planoCarreira;
+	}
+
+	public void setPlanoCarreira(String planoCarreira) {
+		this.planoCarreira = planoCarreira;
+	}
+	
 	
 	public String getAll() {
 		return "Valor: " + getValor()  + "\n"+
 				"Possui bolsa: " + getBolsa() + "\n"+
-				"Instituição: " + getInstituicao().getAll() + "\n"+
+				"Instituiï¿½ï¿½o: " + getInstituicao().getAll() + "\n"+
 				"Curso: " + getCurso().getAll() + "\n"+
 				"Duracao: " + getDuracao() + "\n"+
 				"Tipo de Curso: " + getTipoCurso() + "\n"+

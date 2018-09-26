@@ -17,6 +17,7 @@ create table T_FLO_TIPO_USUARIO(
 create table T_FLO_USUARIO(
   cd_usuario INTEGER PRIMARY KEY,
   cd_tipo_usuario INTEGER NOT NULL,
+  tx_nome VARCHAR(100) NOT NULL,
   tx_email VARCHAR(50) NOT NULL,
   tx_senha VARCHAR(20) NOT NULL,
   dt_nascimento DATE NOT NULL,
@@ -56,11 +57,16 @@ create table T_FLO_CURSO(
 create table T_FLO_INSTITUICAO_CURSO(
     cd_curso INTEGER not null,
     cd_instituicao INTEGER not null,
+    nr_nota_mec DECIMAL(10,2) not null,
     tp_curso DECIMAL(10,2) not null,
     ds_tipo_curso varchar(50),
-    nr_nota_mec DECIMAL(10,2) not null,
     st_bolsa char(1) not null,
     vl_bolsa DECIMAL(10,2) not null,
+    nr_like INTEGER not null,
+    nr_dislike INTEGER not null,
+    video varchar(255) null,
+    ds_curso clob null,
+    ds_plano_carreira clob null,
     PRIMARY KEY (cd_curso,cd_instituicao),
     FOREIGN KEY (cd_curso) REFERENCES T_FLO_CURSO(cd_curso),
     FOREIGN KEY (cd_instituicao) REFERENCES T_FLO_INSTITUICAO(cd_instituicao) 

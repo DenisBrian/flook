@@ -1,6 +1,9 @@
 package br.com.flook.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.com.flook.beans.TipoUsuario;
 import br.com.flook.beans.Usuario;
 import br.com.flook.bo.InstituicaoCursoBO;
 import br.com.flook.bo.UsuarioBO;
@@ -19,95 +23,112 @@ import br.com.flook.excecao.Excecao;
 @WebServlet("/usuarioServlet")
 public class UsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UsuarioServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost(request,response);
+	public UsuarioServlet() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String acao = request.getParameter("acao").toString();
 		String retorno = "";
-		
+
 		switch (acao) {
-		case "procurar":
-			cadastrar(request);
-			retorno = "cadastrar.jsp";
+		case "cadastrar":
+			retorno = cadastrar(request);
 			break;
 		case "logar":
-			retorno = logar(request);
-			break;
-		case "reenviar":
-			reenviarSenha(request);
-			retorno = "esqueceuSenha.jsp";
-			break;
-		case "perfil":
-			visualizarPerfil(request);
-			retorno = "perfil.jsp";
+			retorno = login(request);
 			break;
 		case "deslogar":
-			visualizarPerfil(request);
-			retorno = "perfil.jsp";
+			logout(request);
+			retorno = "index.jsp";
 			break;
 		default:
 			break;
 		}
-		
+
 		request.getRequestDispatcher(retorno).forward(request, response);
 	}
-	
-	
-	public void cadastrar(HttpServletRequest request) {
+
+	public String cadastrar(HttpServletRequest request) {
+		String result = "";
 		
+		try {
+			String nome = request.getParameter("nome");
+			String data = request.getParameter("data");
+			String email = request.getParameter("email");
+			String senha = request.getParameter("senha");
+
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			Calendar c = Calendar.getInstance();
+			c.setTime(sdf.parse(data));
+
+			Usuario obj = new Usuario();
+			obj.setNome(nome);
+			obj.setEmail(email);
+			obj.setSenha(senha);
+			obj.setImagem("");
+			obj.setPontoAcumulado(0);
+			obj.setTipoUsuario(new TipoUsuario(2, ""));
+			obj.setDataNascimento(c);
+			
+			if (UsuarioBO.novoUsuario(obj) > 0) {
+				result = "login.jsp";
+				request.setAttribute("cadastro", "s");
+			} else {
+				result = "cadastrar.jsp";
+				request.setAttribute("invalido", "s");
+			}
+		} catch (Exception e) {
+			request.setAttribute("erro", Excecao.tratarExcecao(e));
+		}
+
+		return result;
 	}
-	
-	public String logar(HttpServletRequest request) {
+
+	public String login(HttpServletRequest request) {
 		String email = request.getParameter("email").toString();
 		String senha = request.getParameter("senha").toString();
 		HttpSession session = request.getSession();
-		
+
 		String page = "";
-		try {	
+		try {
 			Usuario obj = UsuarioBO.obterPorLogin(email, senha);
-			
-			if(obj.getCodigo() > 0)
-			{
+
+			if (obj.getCodigo() > 0) {
 				page = "perfil.jsp";
 				session.setAttribute("usuarioId", obj.getCodigo());
-			}else {
+				session.setAttribute("usuario", obj);
+			} else {
 				page = "login.jsp";
 				request.setAttribute("invalido", "s");
 			}
+		} catch (Exception e) {
+			request.setAttribute("erro", Excecao.tratarExcecao(e));
 		}
-		catch(Exception e) {
-			request.setAttribute("erro",Excecao.tratarExcecao(e));
-		}
-		
+
 		return page;
 	}
-	
-	public void reenviarSenha(HttpServletRequest request) {
-		
-	}
 
-	public void visualizarPerfil(HttpServletRequest request) {
-		
-	}
-
-	public void deslogar(HttpServletRequest request) {
+	public void logout(HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		session.invalidate();
 	}

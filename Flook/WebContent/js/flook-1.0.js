@@ -97,11 +97,13 @@ $(document).ready(function() {
 		showChat(true);
 	}
 	
-	$('.btn-cadastro').click(function() {
+	$('#btnCadastrar').click(function() {
+		  var result = true;
 		  var userName = $('#name');
 		  var name = NameValidation(userName.val().trim());
 		  if (name == false) {
 		    classField(userName, classInput, false);
+		    result = false;
 		  }else {
 		    classField(userName, classInput, true);
 		  }
@@ -110,6 +112,7 @@ $(document).ready(function() {
 		  var email = EmailValidation(emailAdress.val().trim());
 		  if (email == false) {
 		    classField(emailAdress, classInput, false);
+		    result = false;
 		  }else {
 		    classField(emailAdress, classInput, true);
 		  }
@@ -120,12 +123,14 @@ $(document).ready(function() {
 		  var pass = PasswordValidation(userPass.val());
 		  if (pass == false) {
 		    classField(userPass, classInput, false);
+		    result = false;
 		  }else {
 		    classField(userPass, classInput, true);
 		  }
 
 		  if (userPass.val() !== confPass.val()) {
 		    classField(confPass, classInput, false);
+		    result = false;
 		  }else {
 		    classField(confPass, classInput, true);
 		  }
@@ -133,20 +138,14 @@ $(document).ready(function() {
 		  var date = $('#age');
 		  if (date.val() == "") {
 		    classField(date, classInput, false);
+		    result = false;
 		  }else {
 		    classField(date, classInput, true);
 		  }
-
-		  var selectBox = $("#escolaridade");
-		  if (selectBox.val() == "" || selectBox.val() == null) {
-		    classField(selectBox, classInput, false);
-		  }else {
-		    classField(selectBox, classInput, true);
-		  }
 		  
+		  if(result)
+			  $("#formUsrCadastro").submit();
 		  
-		  $("#formChatbot").submit();
-
 		});
 
 });

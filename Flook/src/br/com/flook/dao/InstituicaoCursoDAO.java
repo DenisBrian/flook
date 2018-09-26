@@ -38,18 +38,18 @@ public class InstituicaoCursoDAO {
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public List<InstituicaoCurso> obter(String nome) throws Exception{
-		String _sql = "SELECT \r\n" + 
-				"    T3.IMG_INSTITUICAO,\r\n" + 
-				"    T3.DS_INSTITUICAO,\r\n" + 
-				"    T3.CD_INSTITUICAO,\r\n" + 
-				"    T2.CD_CURSO,    \r\n" + 
-				"    T1.NR_NOTA_MEC,\r\n" + 
-				"    T1.TP_CURSO,\r\n" + 
-				"    T1.DS_TIPO_CURSO\r\n" + 
-				"FROM T_FLO_INSTITUICAO_CURSO T1\r\n" + 
-				"INNER JOIN T_FLO_CURSO T2 ON T1.CD_CURSO = T2.CD_CURSO\r\n" + 
-				"INNER JOIN T_FLO_INSTITUICAO T3 ON T1.CD_INSTITUICAO = T3.CD_INSTITUICAO\r\n" + 
-				"WHERE T2.NM_CURSO LIKE ?";
+		String _sql = "SELECT " + 
+				"    T2.CD_CURSO,  " + 
+				"    T3.CD_INSTITUICAO," +
+				"    T1.NR_NOTA_MEC," + 
+				"    T1.TP_CURSO," + 
+				"    T1.DS_TIPO_CURSO," +
+				"    T3.IMG_INSTITUICAO," + 
+				"    T3.DS_INSTITUICAO" +
+				" FROM T_FLO_INSTITUICAO_CURSO T1 " + 
+				" INNER JOIN T_FLO_CURSO T2 ON T1.CD_CURSO = T2.CD_CURSO " + 
+				" INNER JOIN T_FLO_INSTITUICAO T3 ON T1.CD_INSTITUICAO = T3.CD_INSTITUICAO " + 
+				" WHERE T2.NM_CURSO LIKE ?";
 			    
 		ps = con.prepareStatement(_sql);
 		ps.setString(1, "%" + nome + "%");
@@ -78,6 +78,57 @@ public class InstituicaoCursoDAO {
 		}	
 		return ics;
 	}
+	
+	public InstituicaoCurso obter(int codInstituicao, int codCurso) throws Exception{
+		String _sql = "SELECT\r\n" + 
+				"    T3.NM_INSTITUICAO,\r\n" + 
+				"    t3.img_instituicao,\r\n" + 
+				"    T2.NM_CURSO,\r\n" + 
+				"    T1.NR_NOTA_MEC,\r\n" + 
+				"    T1.TP_CURSO,\r\n" + 
+				"    T1.DS_TIPO_CURSO,\r\n" + 
+				"    T1.NR_LIKE,\r\n" + 
+				"    T1.NR_DISLIKE,\r\n" + 
+				"    T1.VIDEO,\r\n" + 
+				"    T1.DS_CURSO,\r\n" + 
+				"    T1.DS_PLANO_CARREIRA\r\n" + 
+				" FROM T_FLO_INSTITUICAO_CURSO T1\r\n" + 
+				" INNER JOIN T_FLO_CURSO T2 ON T1.CD_CURSO = T2.CD_CURSO\r\n" + 
+				" INNER JOIN T_FLO_INSTITUICAO T3 ON T1.CD_INSTITUICAO = T3.CD_INSTITUICAO\r\n" + 
+				" WHERE T1.CD_INSTITUICAO = ? AND T1.CD_CURSO = ?";
+			    
+		ps = con.prepareStatement(_sql);
+		ps.setInt(1, codInstituicao);
+		ps.setInt(2, codCurso);
+		rs = ps.executeQuery();
+		
+		InstituicaoCurso ic = new InstituicaoCurso();
+		
+		if(rs.next()) {
+			
+			Instituicao ins = new Instituicao();
+			ins.setLogo(rs.getString("IMG_INSTITUICAO"));
+			ins.setNome(rs.getString("NM_INSTITUICAO"));
+			
+			Curso curso = new Curso();
+			curso.setNome(rs.getString("NM_CURSO"));
+			
+			ic.setInstituicao(ins);
+			ic.setCurso(curso);
+			
+			ic.setMec(rs.getFloat("NR_NOTA_MEC"));
+			ic.setDuracao(rs.getFloat("TP_CURSO"));
+			ic.setTipoCurso(rs.getString("DS_TIPO_CURSO"));
+			ic.setLike(rs.getInt("NR_LIKE"));
+			ic.setDislike(rs.getInt("NR_DISLIKE"));
+			ic.setVideo(rs.getString("VIDEO"));
+			ic.setDescricao(rs.getString("DS_CURSO"));
+			ic.setPlanoCarreira(rs.getString("DS_PLANO_CARREIRA"));
+			
+		}	
+		return ic;
+	}
+	
 	/**
 	 * Metodo que faz o fechamento da conexão com o banco de dados.
 	 * @throws Exception Exceção checked SQLExption
