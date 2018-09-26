@@ -30,17 +30,17 @@
 				<div class="text-center col-md-4">
 					<img src="images/livro.png" alt="">
 					<h2>Cursos</h2>
-					<p>XX Cursos cadastrados</p>
+					<p>84 Cursos cadastrados</p>
 				</div>
 				<div class="text-center col-md-4">
 					<img src="images/avaliacao.png" alt="">
 					<h2>Avaliação</h2>
-					<p>XXX Perguntas respondidas</p>
+					<p>38 Perguntas respondidas</p>
 				</div>
 				<div class="text-center col-md-4">
 					<img src="images/forum.png" alt="">
 					<h2>Fórum</h2>
-					<p>XXX perguntas criadas</p>
+					<p>56 perguntas criadas</p>
 				</div>
 			</div>
 		</div>
