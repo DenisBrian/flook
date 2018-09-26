@@ -12,7 +12,7 @@
 		<div class="card " style="width: 30em;">
 			<h5 class="card-header text-center">Ainda não possui uma conta?</h5>
 			<div class="card-body">
-    <form>
+      <form>
         <div class="form-group">
           <label for="name">Nome</label>
           <input type="text" class="form-control" id="name" placeholder="Ex: João" tabindex="1" name="nome">
@@ -53,13 +53,6 @@
           <button type="button" class="btn btn-standard btn-cadastro">Cadastrar</button>
           <div class="mt-3">
             <a href="contato.html">Está tendo problemas?</a>
-          </div>
-      </form>
-        <div class="text-center">
-          <button type="submit" class="btn btn-standard">Cadastrar</button>
-          <div class="mt-3">
-            <a href="contato.html">Está tendo problemas?</a>
-          </div>
           </div>
       </form>
 			</div>
