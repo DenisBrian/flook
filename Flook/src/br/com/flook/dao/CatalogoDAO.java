@@ -28,7 +28,7 @@ public class CatalogoDAO {
 	}
 	
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_CATALOGO
+	 * Adiciona uma tubla na tabela T_FLO_CATALOGO
 	 * @param obj Este parâmetro recebe um objeto Catalogo beans
 	 * @return retorna um Int com codigo do curso
 	 * @throws Exception Exceção checked SQLExption
@@ -54,7 +54,7 @@ public class CatalogoDAO {
 	}	
 	
 	/**
-	 * Busca uma tuba na tabela T_FLO_CATALOGO
+	 * Busca uma tubla na tabela T_FLO_CATALOGO
 	 * @param cod Este parâmetro refere-se ao Id do objeto Catalogo beans
 	 * @return retorna o objeto Catalogo beans
 	 * @throws Exception Exceção checked SQLExption

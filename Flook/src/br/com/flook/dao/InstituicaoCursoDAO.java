@@ -31,7 +31,7 @@ public class InstituicaoCursoDAO {
 		con = Conexao.conectar();
 	}
 	/**
-	 * Busca uma tuba na tabela T_FLO_INSTITUICAO_CURSO pelo nome do Curso
+	 * Busca uma tubla na tabela T_FLO_INSTITUICAO_CURSO pelo nome do Curso
 	 * @param nome Este parâmetro refere-se ao nome do Curso
 	 * @return retorna uma lista de objetosInstituicaoCurso se encontrado
 	 * @throws Exception Exceção checked SQLExption

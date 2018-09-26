@@ -35,7 +35,7 @@ public class EnderecoDAO {
 	}
 	
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_ENDERECO
+	 * Adiciona uma tubla na tabela T_FLO_ENDERECO
 	 * @param obj Este parâmetro representa um objeto Endereco beans
 	 * @return retorna um Int com codigo do Curso
 	 * @throws Exception Exceção checked SQLExption
@@ -66,7 +66,7 @@ public class EnderecoDAO {
 	}
 	
 	/**
-	 * Busca uma tuba na tabela T_FLO_ENDERECO pelo código
+	 * Busca uma tubla na tabela T_FLO_ENDERECO pelo código
 	 * @param cod Este parâmetro refere-se ao Id do objeto Endereco beans
 	 * @return retorna o objeto Endereco beans se encontrado
 	 * @throws Exception Exceção checked SQLExption
@@ -104,7 +104,7 @@ public class EnderecoDAO {
 	}
 
 	/**
-	 * Busca uma tuba na tabela T_FLO_ENDERECO pela Intituicao
+	 * Busca uma tubla na tabela T_FLO_ENDERECO pela Intituicao
 	 * @param cod Este parâmetro refere-se ao atributo codigo do objeto Intituicao beans
 	 * @return retorna uma lista com os objetos Endereco encontrados.
 	 * @throws Exception Exceção checked SQLExption

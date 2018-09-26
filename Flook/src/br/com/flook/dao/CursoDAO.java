@@ -32,7 +32,7 @@ public class CursoDAO {
 	}
 	
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_CURSO
+	 * Adiciona uma tubla na tabela T_FLO_CURSO
 	 * @param obj Este parâmetro representa um objeto Curso beans
 	 * @return retorna um Int com codigo do Curso
 	 * @throws Exception Exceção checked SQLExption
@@ -61,7 +61,7 @@ public class CursoDAO {
 	}	
 	
 	/**
-	 * Busca uma tuba na tabela T_FLO_CURSO pelo código
+	 * Busca uma tubla na tabela T_FLO_CURSO pelo código
 	 * @param cod Este parâmetro refere-se ao Id do objeto Curso beans
 	 * @return retorna o objeto Curso beans
 	 * @throws Exception Exceção checked SQLExption
@@ -88,7 +88,7 @@ public class CursoDAO {
 	}
 	
 		/**
-	 * Busca uma tuba na tabela T_FLO_CURSO pelo atributo nome 
+	 * Busca uma tubla na tabela T_FLO_CURSO pelo atributo nome 
 	 * @param nome Este parâmetro refere-se ao atributo nome do objeto Curso beans
 	 * @return retorna uma lista com os Curso encontrados.
 	 * @throws Exception Exceção checked SQLExption
