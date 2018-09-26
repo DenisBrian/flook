@@ -24,7 +24,7 @@ public class CertificadoBO {
 	 * Este método ira validar e repassar o objeto Certificado para a classe CertificadoBO
 	 * @param obj Este parâmetro representa um objeto Curso do Beans
 	 * @return O método retorna um valor booleano
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static boolean novoCertificado(Certificado obj) throws Exception{
@@ -51,7 +51,7 @@ public class CertificadoBO {
 	 * Este método ira o obter o Certificado por Usuario
 	 * @param cod Este parâmetro representa o codigo do objeto Certificado
 	 * @return O método retorna os Certificados encontrados referente ao Usuário
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static List<Certificado> obterCertificadoPorUsuario(int cod) throws Exception{

@@ -21,7 +21,7 @@ public class CatalogoBO {
 	 * Este método ira validar e repassar o objeto Catalogo para a classe CatalogoDAO
 	 * @param obj Este parâmetro representa um objeto Catalogo do Beans.
 	 * @return O método retorna um numero com o codigo do Curso.
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLExceptionn
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static int novoCatalogo(Catalogo obj) throws Exception{
@@ -42,7 +42,7 @@ public class CatalogoBO {
 	 * Este método ira pesquisar o Catalogo pelo codigo
 	 * @param cod Este parâmetro representa o codigo do objeto Catalogo 
 	 * @return O método retorna os Catalogo encontrados
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static Catalogo obterPorCodigo(int cod) throws Exception{		

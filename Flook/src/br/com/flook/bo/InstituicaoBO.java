@@ -24,7 +24,7 @@ public class InstituicaoBO {
 	 * Este método ira validar e repassar o objeto Instituicao para a classe InstituicaoDAO
 	 * @param obj Este parâmetro representa um objeto Instituicao do Beans.
 	 * @return O método retorna um codigo 0
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static int novaInstituicao(Instituicao obj) throws Exception {
@@ -61,7 +61,7 @@ public class InstituicaoBO {
 	 * Este método ira validar e repassar o objeto Instituicao para a classe InstituicaoDAO
 	 * @param obj Este parâmetro representa um objeto Instituicao do Beans.
 	 * @return O método retorna um codigo 0
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static Instituicao obterPorCodigo(int cod) throws Exception {

@@ -32,7 +32,7 @@ public class UsuarioBO {
 	 *            Este parâmetro representa um objeto Usuario do Beans.
 	 * @return O método retorna um codigo
 	 * @throws Exception
-	 *             Tratado a exceção checked SQLExceptio
+	 *             Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static int novoUsuario(Usuario obj) throws Exception {
@@ -66,7 +66,7 @@ public class UsuarioBO {
 	 *            Este parâmetro representa o codigo do Usuario
 	 * @return O método retorna um objeto Usuario se encontrado
 	 * @throws Exception
-	 *             Tratado a exceção checked SQLExceptio
+	 *             Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static Usuario obterPorCodigo(int cod) throws Exception {

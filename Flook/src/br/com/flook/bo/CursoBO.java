@@ -23,7 +23,7 @@ public class CursoBO {
 	 * Este método ira validar e repassar o objeto Curso para a classe CursoDAO
 	 * @param curso Este parâmetro representa um objeto Curso do Beans.
 	 * @return O método retorna um numero com o codigo do Curso.
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static int novoCurso(Curso curso) throws Exception {
@@ -47,7 +47,7 @@ public class CursoBO {
 	 * Este método ira buscar os objetos Curso pelo nome.
 	 * @param nome Este parâmetro representa o nome do curso.
 	 * @return O método retorna os Cursos desejados
-	 * @throws Exception Tratado a exeção checked SQLExceptio
+	 * @throws Exception Tratado a exeção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static List<Curso> obterCursosPorNome(String nome) throws Exception{
@@ -61,7 +61,7 @@ public class CursoBO {
 	 * Este método ira buscar o objeto Curso por seu codigo
 	 * @param codigo Este parâmetro representa o codigo do curso.
 	 * @return O método retorna o Curso desejado.
-	 * @throws Exception Tratado a exeção checked SQLExceptio
+	 * @throws Exception Tratado a exeção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static Curso obterCursoPorCodigo(int codigo) throws Exception{

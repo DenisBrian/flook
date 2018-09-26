@@ -21,7 +21,7 @@ public class InstituicaoCursoBO {
 	 * Este método ira buscar as a instutuição pelo nome do Curso.
 	 * @param nome Este parâmetro representa o nome do objeto Curso Beans.
 	 * @return O método retorna uma lista com as Instituições encontradas
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static List<InstituicaoCurso> obterPorNomeDeCurso(String nome) throws Exception{

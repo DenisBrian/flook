@@ -27,7 +27,7 @@ public class EnderecoBO {
 	 * Este método ira validar e repassar o objeto Endereco para a classe EnderecoDAO
 	 * @param obj Este parâmetro representa um objeto Endereco do Beans.
 	 * @return O método retorna um codigo 0
-	 * @throws Exception Tratado a exceção checked SQLExceptio
+	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA
 	 */
 	public static int novoEndereco(Endereco obj) throws Exception{
