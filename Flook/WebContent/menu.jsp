@@ -15,8 +15,8 @@
           <li class="nav-item"><a class="nav-link" href="./contato.jsp">CONTATO</a></li>
         </ul>
         <c:choose>
-        	<c:when test="${ usuarioId > 0 }"><button class="btn btn-logout" type="button"><a href="./usuarioServlet?acao=deslogar">Sair</a></button></c:when>
-        	<c:otherwise><button class="btn btn-standard" type="button"><a href="./login.jsp">Entrar</a></button></c:otherwise>
+        	<c:when test="${ usuarioId > 0 }"><button class="btn btn-logout" type="button"><a href="./usuarioServlet?acao=deslogar">SAIR</a></button></c:when>
+        	<c:otherwise><button class="btn btn-standard" type="button"><a href="./login.jsp">ENTRAR</a></button></c:otherwise>
         </c:choose>
         
       </div>
