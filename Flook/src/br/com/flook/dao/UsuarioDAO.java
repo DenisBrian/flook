@@ -60,7 +60,7 @@ public class UsuarioDAO {
 		return cod;				
 	}
 	/**
-	 * Busta uma tupla na tabela T_FLO_USUARIO
+	 * Busca uma tupla na tabela T_FLO_USUARIO
 	 * @param cod Este parâmetro é o codigo do Usuario
 	 * @return retorna um objeto Usuario se encontrado.
 	 * @throws Exception Exceção checked SQLExption
