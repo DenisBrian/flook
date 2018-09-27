@@ -107,8 +107,8 @@ public class UsuarioDAO {
 	
 	/**
 	 * Busca uma tupla na tabela T_FLO_TIPO_USUARIO
-	 * @param cod email parâmetro é o email do Usuario
-	 * @param cod email parâmetro é o senha do Usuario
+	 * @param email Este parâmetro é o email do Usuario
+	 * @param senha Este parâmetro é o senha do Usuario
 	 * @return retorna um objeto Usuario se encontrado.
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
