@@ -54,7 +54,7 @@ public class CertificadoDAO {
 	}
 
 	/**
-	 * Adiciona uma ou mais tuplas na tabela T_FLO_CERTIFICADO
+	 * Busca uma ou mais tuplas na tabela T_FLO_CERTIFICADO
 	 * @param cod Este parâmetro recebe o codigo do Usuario
 	 * @return retorna uma lista com os objetos encontrados
 	 * @throws Exception Exceção checked SQLExption

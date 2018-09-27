@@ -72,7 +72,7 @@ public class EnderecoDAO {
 	
 	/**
 	 * Busca uma tupla na tabela T_FLO_ENDERECO pelo código
-	 * @param cod Este parâmetro refere-se ao Id do objeto Endereco beans
+	 * @param cod Este parâmetro refere-se ao codigo do objeto Endereco beans
 	 * @return retorna o objeto Endereco beans se encontrado
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
