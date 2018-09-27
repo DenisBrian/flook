@@ -31,7 +31,7 @@ public class InstituicaoCursoDAO {
 		con = Conexao.conectar();
 	}
 	/**
-	 * Busca uma tuba na tabela T_FLO_INSTITUICAO_CURSO pelo nome do Curso
+	 * Busca uma tupla na tabela T_FLO_INSTITUICAO_CURSO pelo nome do Curso
 	 * @param nome Este parâmetro refere-se ao nome do Curso
 	 * @return retorna uma lista de objetosInstituicaoCurso se encontrado
 	 * @throws Exception Exceção checked SQLExption
@@ -78,7 +78,14 @@ public class InstituicaoCursoDAO {
 		}	
 		return ics;
 	}
-	
+	/**
+	 * Busca uma tupla na tabela T_FLO_INSTITUICAO_CURSO pelo codigo da Instituicao e o codigo do Curso
+	 * @param codInstituicao Este parâmetro refere-se ao codigo da Instituição
+	 * @param codCurso Este parâmetro refere-se ao codigo do Curso
+	 * @return retorna um objeto
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public InstituicaoCurso obter(int codInstituicao, int codCurso) throws Exception{
 		String _sql = "SELECT\r\n" + 
 				"    T3.NM_INSTITUICAO,\r\n" + 

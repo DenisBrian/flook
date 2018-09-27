@@ -30,7 +30,7 @@ public class UsuarioDAO {
 		con = Conexao.conectar();
 	}
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_USUARIO
+	 * Adiciona uma tupla na tabela T_FLO_USUARIO
 	 * @param obj Este parâmetro representa um objeto Usuario beans
 	 * @return retorna um Int com codigo do Usuario
 	 * @throws Exception Exceção checked SQLExption
@@ -60,7 +60,7 @@ public class UsuarioDAO {
 		return cod;				
 	}
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_USUARIO
+	 * Busta uma tupla na tabela T_FLO_USUARIO
 	 * @param cod Este parâmetro é o codigo do Usuario
 	 * @return retorna um objeto Usuario se encontrado.
 	 * @throws Exception Exceção checked SQLExption
@@ -104,8 +104,12 @@ public class UsuarioDAO {
 		
 		return obj;
 	}
+	
 	/**
-	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * Busca uma tupla na tabela T_FLO_TIPO_USUARIO
+	 * @param cod email parâmetro é o email do Usuario
+	 * @param cod email parâmetro é o senha do Usuario
+	 * @return retorna um objeto Usuario se encontrado.
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
 	 */
@@ -148,7 +152,11 @@ public class UsuarioDAO {
 		
 		return obj;
 	}
-	
+	/**
+	 * Metodo que faz o fechamento da conexão com o banco de dados.
+	 * @throws Exception Exceção checked SQLExption
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public void fechar() throws Exception{
 		con.close();
 	}

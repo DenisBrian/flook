@@ -6,13 +6,12 @@ import br.com.flook.beans.Usuario;
 import br.com.flook.dao.UsuarioDAO;
 
 /**
- * Responsavel por todas as regras de negócios e padronizações do Usuario 1°) A
- * quantidades de caracteres do email não pode ser igual a 0 e não pode ser
- * maior que 50 2°) O email ter que ser valido 3°) A quantidades de caracteres
- * da senha não pode ser igual a 0 e não pode ser maior que 20 4°) A quantidades
- * de caracteres da imagem não pode ser maior que 255 5°) A quantidades de
- * caracteres do codigo não pode ser igual a 0
- * 
+ * Responsavel por todas as regras de negócios e padronizações do Usuario
+ * 1°) A quantidades de caracteres do email não pode ser igual a 0 e não pode ser maior que 50 
+ * 2°) O email tem que ser valido 
+ * 3°) A quantidades de caracteres da senha não pode ser igual a 0 e não pode ser maior que 20
+ * 4°) A quantidades de caracteres da imagem não pode ser maior que 255 
+ * 5°) A quantidades de caracteres do codigo não pode ser igual a 0
  * @author FELIPE HONÓRIO CAMARGO
  * @author DENIS BRIAN CANOLA
  * @author RAFAEL MACHADO CARDOSO
@@ -72,7 +71,15 @@ public class UsuarioBO {
 		dao.fechar();
 		return obj;
 	}
-
+	
+	/**
+	 * Este método ira cadastra
+	 * @param email Este parâmetro representa o email do Usuario
+	 * @param senha Este parâmetro representa a senha do Usuario
+	 * @return O método retorna um objeto 
+	 * @throws Exception Tratado a exceção checked SQLException
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public static Usuario obterPorLogin(String email, String senha) throws Exception {
 		UsuarioDAO dao = new UsuarioDAO();
 		Usuario obj = dao.obter(email, senha);

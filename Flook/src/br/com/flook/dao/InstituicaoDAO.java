@@ -28,7 +28,7 @@ public class InstituicaoDAO {
 		con = Conexao.conectar();
 	}
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_INSTITUICAO
+	 * Adiciona uma tupla na tabela T_FLO_INSTITUICAO
 	 * @param obj Este parâmetro representa um objeto Instituicao beans
 	 * @return retorna um Int com codigo do Instituicao
 	 * @throws Exception Exceção checked SQLExption
@@ -58,7 +58,7 @@ public class InstituicaoDAO {
 		return cod;
 	}
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_INSTITUICAO
+	 * Adiciona uma tupla na tabela T_FLO_INSTITUICAO
 	 * @param instituicao Este parâmetro é o codigo da Instituicao
 	 * @param endereco Este parâmetro é o codigo do Endereco
 	 * @return retorna um valor booleano
@@ -75,7 +75,7 @@ public class InstituicaoDAO {
 		return ps.execute();
 	}
 	/**
-	 * Busca uma tuba na tabela T_FLO_INSTITUICAO pelo codigo
+	 * Busca uma tupla na tabela T_FLO_INSTITUICAO pelo codigo
 	 * @param cod Este parâmetro refere-se ao codigo da Instituicao
 	 * @return retorna o objeto Instituicao se encontrado
 	 * @throws Exception Exceção checked SQLExption

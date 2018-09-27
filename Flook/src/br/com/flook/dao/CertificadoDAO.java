@@ -34,7 +34,7 @@ public class CertificadoDAO {
 		con = Conexao.conectar();
 	}
 	/**
-	 * Adiciona uma tuba na tabela T_FLO_CERTIFICADO
+	 * Adiciona uma tupla na tabela T_FLO_CERTIFICADO
 	 * @param obj Este parâmetro recebe um objeto Certificado beans
 	 * @return retorna um valor booleano
 	 * @throws Exception Exceção checked SQLExption
@@ -54,7 +54,7 @@ public class CertificadoDAO {
 	}
 
 	/**
-	 * Adiciona uma ou mais tubas na tabela T_FLO_CERTIFICADO
+	 * Busca uma ou mais tuplas na tabela T_FLO_CERTIFICADO
 	 * @param cod Este parâmetro recebe o codigo do Usuario
 	 * @return retorna uma lista com os objetos encontrados
 	 * @throws Exception Exceção checked SQLExption

@@ -37,7 +37,13 @@ public class InstituicaoCursoBO {
 		return ics;
 	}
 	
-	
+	/**
+	 * Este método ira buscar as a Instutuição pelo codido da Intituição e pelo codigo do curso.
+	 * @param nome Este parâmetro representa o nome do objeto Curso Beans.
+	 * @return O método retorna uma lista com as Instituições encontradas
+	 * @throws Exception Tratado a exceção checked SQLException
+	 * @author DENIS BRIAN CANOLA
+	 */
 	public static InstituicaoCurso obterPorInstituicaoCurso(int codInstituicao, int codCurso) throws Exception{		
 		InstituicaoCursoDAO dao = new InstituicaoCursoDAO();
 		InstituicaoCurso ic = dao.obter(codInstituicao,codCurso);
