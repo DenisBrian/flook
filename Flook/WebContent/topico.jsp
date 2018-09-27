@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta content="UTF-8">
+<meta charset="UTF-8">
 <title>Flook</title>
 <%@ include file="header.jsp"%>
 </head>  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -17,10 +17,12 @@
     </div>
   </div>
   <div class="container pt-3 ">
-    <h4 class="pt-2">Como posicionar elementos com CSS</h4>
+    <h4 class="pt-2">Comando watch</h4>
     <hr class="my-3">
     <p><img src="./images/user.png" alt="" width="35px" height="35px" class="mr-4">Criado por: <span>Thais Araújo</span> <span>(25.00 pontos)</span></p>
-    <p class="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="question">Boa noite, quando coloco o comando sass --watch estilos.scss:estilos.css a resposta que recebo é:
+
+Sass is watching for changes. Press Ctrl-C to stop. Encoding::CompatibilityError: incompatible character encodings: CP850 and UTF-8 Use --trace for backtrace.</p>
   </div>
   <div class="container-fluid mt-5 pt-3 pb-3 bannerForum">
     <div class="container">
@@ -29,15 +31,23 @@
   </div>
   <div class="container pt-3">
     <div class="pt-3 pb-3">
-      <p><img src="./images/user.png" alt="" width="35px" height="35px" class="mr-4"><span>Matheus Silva</span> <span>(431.00 pontos)</span><img src="./images/correct.png" class="ml-3 mr-3"alt="" height="30" width="30"></p>
-      <p class="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p><img src="./images/user.png" alt="" width="35px" height="35px" class="mr-4"><span>Denis Brian</span> <span>(431.00 pontos)</span><img src="./images/correct.png" class="ml-3 mr-3"alt="" height="30" width="30"></p>
+      <p class="question">
+      Boa noite, mudei a linha 87 do arquivo filesystem.rb( C:\Ruby22-x64\lib\ruby\gems\2.2.0\gems\sass-3.4.22\lib\sass\importers) para :
+
+ if name.index('@root' + '/') == 0
+Dessa forma o watch começou a funcionar.</p>
       </div>
       <hr class="my-3">
       <div class="pt-3 pb-3">
         <p><img src="./images/user.png" alt="" width="35px" height="35px" class="mr-4"><span>Matheus Silva</span> <span>(431.00 pontos)</span></p>
-        <p class="question">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor!
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="question">Oi Thais, boa noite
+
+Tenta adicionar a linha `@charset "UTF-8" no seu arquivo.scss para ver se vai? Na primeira linha.
+
+Ah, qual editor de texto e sistema operacional que você está usando?
+
+Abcs!</p>
         </div>
         <hr class="my-3">
           <div class="input-group answer mb-5 mt-1">

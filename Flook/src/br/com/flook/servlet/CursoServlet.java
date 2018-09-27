@@ -46,12 +46,10 @@ public class CursoServlet extends HttpServlet {
 		
 		switch (acao) {
 		case "procurar":
-			procurarCursos(request);
-			retorno = "procurarCurso.jsp";
+			retorno = procurarCursos(request);
 			break;
 		case "carregar":
-			carregarCurso(request);
-			retorno = "curso.jsp";
+			retorno = carregarCurso(request);
 		default:
 			break;
 		}
@@ -59,27 +57,36 @@ public class CursoServlet extends HttpServlet {
 		request.getRequestDispatcher(retorno).forward(request, response);
 	}
 
-	public void procurarCursos(HttpServletRequest request) {
+	public String procurarCursos(HttpServletRequest request) {
+		String page = "";
 		try {	
 			String param = request.getParameter("param").toString();
 			request.setAttribute("lista", InstituicaoCursoBO.obterPorNomeDeCurso(param));
+			page = "procurarCurso.jsp";
 		}
 		catch(Exception e) {
 			request.setAttribute("erro",Excecao.tratarExcecao(e));
+			page = "erro.jsp";
 		}
+		
+		return page;
 	}
 
-	public void carregarCurso(HttpServletRequest request) {
+	public String carregarCurso(HttpServletRequest request) {
+		String page = "";
 		try {	
 			int codIns = Integer.parseInt(request.getParameter("f").toString());
 			int codCurso = Integer.parseInt(request.getParameter("c").toString());
 			
 			request.setAttribute("ic", InstituicaoCursoBO.obterPorInstituicaoCurso(codIns,codCurso));
-			
+			page = "curso.jsp";
 		}
 		catch(Exception e) {
 			request.setAttribute("erro",Excecao.tratarExcecao(e));
+			page = "erro.jsp";
 		}
+		
+		return page;
 	}
 
 }

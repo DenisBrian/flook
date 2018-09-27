@@ -99,6 +99,7 @@ public class UsuarioServlet extends HttpServlet {
 			}
 		} catch (Exception e) {
 			request.setAttribute("erro", Excecao.tratarExcecao(e));
+			result = "erro.jsp";
 		}
 
 		return result;
@@ -123,6 +124,7 @@ public class UsuarioServlet extends HttpServlet {
 			}
 		} catch (Exception e) {
 			request.setAttribute("erro", Excecao.tratarExcecao(e));
+			page = "erro.jsp";
 		}
 
 		return page;

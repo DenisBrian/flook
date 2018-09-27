@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta content="UTF-8">
+<meta charset="UTF-8">
 <title>Flook</title>
 <%@ include file="header.jsp"%>
 </head>
@@ -12,7 +12,7 @@
 	<div class="container container-course">
 		<div class="input-group text-center mb-5">
 			<input id="inpCurso" type="text" class="form-control"
-				placeholder="Pesquise um curso aqui ...">
+				placeholder="Pesquise um tópico aqui ...">
 			<div class="input-group-append" id="button-addon4">
 				<button id="btnCurso" class="btn btn-blue" type="button"></button>
 			</div>

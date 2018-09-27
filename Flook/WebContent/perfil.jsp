@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta content="UTF-8">
+<meta charset="UTF-8">
 <title>Flook</title>
 <%@ include file="header.jsp"%>
 </head>
@@ -23,7 +23,7 @@
       <div class="text-center col-md-4 mb-5">
         <h5 class="mb-4"><i class="fas fa-wrench tool-icon"></i>Opções</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><i class="fas fa-key key-icone mr-2"></i><a href="resetSenha.html">Alterar Senha</a></li>
+          <li class="list-group-item"><i class="fas fa-key key-icone mr-2"></i><a href="esqueceuSenha.jsp">Alterar Senha</a></li>
           <li class="list-group-item"><i class="fas fa-book certificado-icone mr-2"></i><a  data-toggle="modal" data-target=".certificado" class="btn-certificado">Certificado</a></li>
         </ul>
       </div>
