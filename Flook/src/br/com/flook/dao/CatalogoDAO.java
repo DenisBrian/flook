@@ -11,8 +11,8 @@ import br.com.flook.conexao.Conexao;
  * @author DENIS BRIAN CANOLA
  * @version 1.0
  * @since 1.0
- * @see br.com.fiap.beans.Catalogo
- * @see br.com.fiap.bo.CatalogoBO
+ * @see br.com.flook.beans.Catalogo
+ * @see br.com.flook.bo.CatalogoBO
  */
 public class CatalogoDAO {
 	private Connection con;

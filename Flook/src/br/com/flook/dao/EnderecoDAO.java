@@ -32,6 +32,7 @@ public class EnderecoDAO {
 	
 	/**
 	 * Construtor responsável por abrir conexão por parametro
+	 * @param _con Refere-se conexão 
 	 * @throws Exception Exceção checked SQLException
 	 * @author Denis Brian Canola
 	 */

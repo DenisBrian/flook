@@ -17,7 +17,7 @@ import br.com.flook.dao.CertificadoDAO;
 * @version 1.0
 * @since 1.0
 * @see br.com.flook.beans.Certificado
-* @see br.com.flook.dao.CertificadoBO
+* @see br.com.flook.dao.CertificadoDAO
 */
 public class CertificadoBO {
 	/**

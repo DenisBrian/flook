@@ -17,8 +17,8 @@ import br.com.flook.conexao.Conexao;
  * @author DENIS BRIAN CANOLA
  * @version 1.0
  * @since 1.0
- * @see br.com.fiap.beans.Certificado
- * @see br.com.fiap.bo.CertificadoBO
+ * @see br.com.flook.beans.Certificado
+ * @see br.com.flook.dao.CertificadoDAO
  */
 public class CertificadoDAO {
 	private Connection con;

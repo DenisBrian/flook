@@ -59,7 +59,7 @@ public class InstituicaoBO {
 	}
 	/**
 	 * Este método ira validar e repassar o objeto Instituicao para a classe InstituicaoDAO
-	 * @param obj Este parâmetro representa um objeto Instituicao do Beans.
+	 * @param cod Este parâmetro representa um codigo do Curso Beans.
 	 * @return O método retorna um codigo 0
 	 * @throws Exception Tratado a exceção checked SQLException
 	 * @author DENIS BRIAN CANOLA

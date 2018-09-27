@@ -12,8 +12,8 @@ import br.com.flook.dao.TipoUsuarioDAO;
  * @author JEFFREY RODRIGUES INNOCENCIO
  * @version 1.0
  * @since 1.0
- * @see br.com.fiap.beans.TipoUsuario
- * @see br.com.fiap.dao.TipoUsuarioDAO
+ * @see br.com.flook.beans.TipoUsuario
+ * @see br.com.flook.dao.TipoUsuarioDAO
  */
 public class TipoUsuarioBO {
 	/**
