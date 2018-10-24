@@ -11,7 +11,7 @@
 <%@ include file="menu.jsp"%>
   <div class="container">
     <div class="input-group text-center mt-5">
-      <input type="text" class="form-control" placeholder="Procure um curso aqui ..." >
+      <input type="text" class="form-control" placeholder="Procure um tópico aqui ..." >
       <div class="input-group-append" id="button-addon4">
         <button class="btn btn-blue" type="button"></button>
       </div>
@@ -23,24 +23,24 @@
             <h5 class="text-center"><img src="./images/trophy.png" width="40px" height="40px" class="mr-3">Ranking</h5>
             <hr class="my-1 mb-3">
             <div class="ranking-person mt-1 mb-1">
-              <h6 class="gold">Felipe</h6>
-              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">xx,xx pontos</p>
+              <h6 class="gold">Felipe Honorio</h6>
+              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">50 pontos</p>
             </div>
             <div class="ranking-person mt-1 mb-1">
-              <h6 class="silver">Felipe</h6>
-              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">xx,xx pontos</p>
+              <h6 class="silver">Jeffrey</h6>
+              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">20 pontos</p>
             </div>
             <div class="ranking-person mt-1 mb-1">
-              <h6 class="copper">Felipe</h6>
-              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">xx,xx pontos</p>
+              <h6 class="copper">Matheus Aprigio</h6>
+              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">5 pontos</p>
             </div>
             <div class="ranking-person mt-1 mb-1">
-              <h6 class="participation">Felipe</h6>
-              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">xx,xx pontos</p>
+              <h6 class="participation">Denis Brian Canola</h6>
+              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">0 pontos</p>
             </div>
             <div class="ranking-person mt-1 mb-1">
-              <h6 class="participation">Felipe</h6>
-              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">xx,xx pontos</p>
+              <h6 class="participation">Rafael</h6>
+              <p><img src="./images/user.png" width="25px" height="25px" class="mr-3">0 pontos</p>
             </div>
           </div>
         </div>

@@ -18,6 +18,12 @@ public class TesteTipoUsuario {
 			case 'O':
 				obterPorCodigo();
 				break;
+			case 'A':
+				alterar();
+				break;
+			case 'D':
+				deletar();
+				break;
 			default:
 				break;
 			}
@@ -42,15 +48,36 @@ public class TesteTipoUsuario {
 		int codigo = TipoUsuarioBO.novoTipoUsuario(obj);
 		
 		if (codigo > 0)
-			System.out.println("O tipo de usuário foi cadastrado com sucesso, o código gerado foi: " + codigo);
+			System.out.println("O tipo de usuï¿½rio foi cadastrado com sucesso, o cï¿½digo gerado foi: " + codigo);
 		else
-			System.out.println("O tipo de usuário não foi cadastrado");
+			System.out.println("O tipo de usuï¿½rio nï¿½o foi cadastrado");
 		
 	}
 	
 	private static void obterPorCodigo() throws Exception {
-		TipoUsuario obj = TipoUsuarioBO.obterPorCodigo(1);
+		TipoUsuario obj = TipoUsuarioBO.obterPorCodigo(21);
 		System.out.println(obj.getAll());
 	}
 
+	private static void alterar() throws Exception{
+		TipoUsuario obj = new TipoUsuario();
+		obj.setCodigo(21);
+		obj.setTipo("TIPO ALTERADO");
+		
+		Boolean result = TipoUsuarioBO.alterarTipoUsuario(obj);
+		
+		if (result)
+			System.out.println("O tipo de usuï¿½rio foi alterado com sucesso");
+		else
+			System.out.println("O tipo de usuï¿½rio nï¿½o foi alterado");
+	}
+	
+	private static void deletar() throws Exception{
+		Boolean result = TipoUsuarioBO.deletarTipoUsuario(21);
+		
+		if (result)
+			System.out.println("O tipo de usuï¿½rio foi deletado com sucesso");
+		else
+			System.out.println("O tipo de usuï¿½rio nï¿½o foi deletado");
+	}
 }

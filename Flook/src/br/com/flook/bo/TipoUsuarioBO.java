@@ -47,4 +47,28 @@ public class TipoUsuarioBO {
 		return cod;
 	}
 
+	public static Boolean alterarTipoUsuario(TipoUsuario obj) throws Exception{
+		if(obj.getCodigo() == 0)
+			return false;
+		
+		if(obj.getTipo().length() == 0 || obj.getTipo().length() > 120)
+			return false;	
+		
+		TipoUsuarioDAO dao = new TipoUsuarioDAO();
+		Boolean result = dao.alterar(obj);
+		dao.fechar();
+		
+		return result;
+	}
+
+	public static Boolean deletarTipoUsuario(int cod) throws Exception{
+		if(cod == 0)
+			return false;
+				
+		TipoUsuarioDAO dao = new TipoUsuarioDAO();
+		Boolean result = dao.deletar(cod);
+		dao.fechar();
+		
+		return result;
+	}
 }

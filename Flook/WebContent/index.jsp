@@ -13,7 +13,7 @@
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
 			<h2 class="text-center">Flook</h2>
-			<p class="lead text-center">A sua página de pesquisa de curso</p>
+			<p class="lead text-center"> Um primeiro olhar para o futuro</p>
 			<hr class="my-4">
 			<div class="container">
 				<div class="input-group text-center">

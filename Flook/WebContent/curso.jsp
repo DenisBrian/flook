@@ -13,7 +13,7 @@
 		<div class="container-course text-center">
 			<a class="pr-4" href="procurarCurso.jsp"><img
 				src="./images/back.png" width="17" height="17" alt="">Voltar</a>
-			<h3>${ ic.instituicao.nome } - ${ ic.curso.nome  }</h3>
+			<h3>${ ic.instituicao.nome }- ${ ic.curso.nome  }</h3>
 			<hr class="my-4">
 		</div>
 		<div class="row">
@@ -27,7 +27,9 @@
 						<div class="col-md-9">
 							<div class="container-fluid">
 								<div class="row">
-									<iframe  class="mb-5" width="806" height="353" src="${ ic.video }" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<iframe class="mb-5" width="806" height="353"
+										src="${ ic.video }" frameborder="0"
+										allow="autoplay; encrypted-media" allowfullscreen></iframe>
 								</div>
 								<div class="row">
 									<h5>Descrição:</h5>
@@ -49,11 +51,13 @@
 							<hr class="my-1">
 							<p>Tipo de curso: ${ ic.tipoCurso }</p>
 							<hr class="my-1">
-							<a href=""><i class="far fa-thumbs-up"></i></a><span>${ ic.like }</span> <a
-								href=""><i class="far fa-thumbs-down"></i></a><span>${ ic.dislike }</span>
-							<button class="btn btn-standard" type="button" name="button">
-								<a href="criarPergunta.jsp">Abrir Tópico</a>
-							</button>
+							<a href=""><i class="far fa-thumbs-up"></i></a><span>${ ic.like }</span>
+							<a href=""><i class="far fa-thumbs-down"></i></a><span>${ ic.dislike }</span>
+							<c:if test="${ usuarioId > 0 }">
+								<button class="btn btn-standard" type="button" name="button">
+									<a href="criarPergunta.jsp">Abrir Tópico</a>
+								</button>
+							</c:if>
 						</div>
 					</div>
 				</div>
