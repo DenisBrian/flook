@@ -2,6 +2,7 @@ package br.com.flook.bo;
 
 import br.com.flook.beans.Catalogo;
 import br.com.flook.dao.CatalogoDAO;
+
 /**
 * Responável por todas as Regras de negócio e padronizações do CatalogoBO
 * 1°) A quantidades de caracteres da descrição não pode ser igual a 0
@@ -50,6 +51,31 @@ public class CatalogoBO {
 		Catalogo obj = dao.obter(cod);
 		dao.fechar();
 		return obj;
+	}
+	
+	public static Boolean alterarCatalogo(Catalogo obj) throws Exception{
+		if(obj.getCodigo() == 0)
+			return false;
+		
+		if(obj.getDescricao().length() == 0 || obj.getDescricao().length() > 50)
+			return false;	
+		
+		CatalogoDAO dao = new CatalogoDAO();
+		Boolean result = dao.alterar(obj);
+		dao.fechar();
+		
+		return result;
+	}
+
+	public static Boolean deletarCatalogo(int cod) throws Exception{
+		if(cod == 0)
+			return false;
+				
+		CatalogoDAO dao = new CatalogoDAO();
+		Boolean result = dao.deletar(cod);
+		dao.fechar();
+		
+		return result;
 	}
 
 }

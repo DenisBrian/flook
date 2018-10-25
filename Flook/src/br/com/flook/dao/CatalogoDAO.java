@@ -85,4 +85,28 @@ public class CatalogoDAO {
 	public void fechar() throws Exception{
 		con.close();
 	}
+
+	public Boolean deletar(int cod) throws Exception {
+		String _sql = "DELETE T_FLO_CATALOGO WHERE CD_CATALOGO = ?";
+		ps = con.prepareStatement(_sql);
+		ps.setInt(1, cod);
+
+		int affectedRows = ps.executeUpdate();
+		
+		return affectedRows > 0;
+	}
+
+	public Boolean alterar(Catalogo obj) throws Exception {
+		String _sql = "UPDATE T_FLO_CATALOGO SET DS_CATALOGO = ? WHERE CD_CATALOGO = ?";
+		ps = con.prepareStatement(_sql);
+
+		ps.setString(1, obj.getDescricao());
+		ps.setInt(2, obj.getCodigo());
+
+		int affectedRows = ps.executeUpdate();
+		
+		return affectedRows > 0;
+	}
+
+
 }

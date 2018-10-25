@@ -1,7 +1,9 @@
 package br.com.flook.teste;
 
 import br.com.flook.beans.Catalogo;
+import br.com.flook.beans.TipoUsuario;
 import br.com.flook.bo.CatalogoBO;
+import br.com.flook.bo.TipoUsuarioBO;
 import br.com.flook.excecao.Excecao;
 
 public class TesteCatalogo {
@@ -17,6 +19,12 @@ public class TesteCatalogo {
 				break;
 			case 'O':
 				obterPorCodigo();
+				break;
+			case 'A':
+				alterar();
+				break;
+			case 'D':
+				deletar();
 				break;
 			default:
 				break;
@@ -40,12 +48,34 @@ public class TesteCatalogo {
 		int codigo = CatalogoBO.novoCatalogo(obj);
 		
 		if (codigo > 0)
-			System.out.println("O catalogo foi cadastrado com sucesso, o código gerado foi: " + codigo);
+			System.out.println("O catalogo foi cadastrado com sucesso, o cï¿½digo gerado foi: " + codigo);
 		else
-			System.out.println("O catalogo não foi cadastrado");
+			System.out.println("O catalogo nï¿½o foi cadastrado");
 	}
 	private static void obterPorCodigo() throws Exception{
-		Catalogo obj = CatalogoBO.obterPorCodigo(1);
+		Catalogo obj = CatalogoBO.obterPorCodigo(21);
 		System.out.println(obj.getAll());
-	}	
+	}
+	
+	private static void alterar() throws Exception{
+		Catalogo obj = new Catalogo();
+		obj.setCodigo(21);
+		obj.setDescricao("DESCRICAO ALTERADA");
+		
+		Boolean result = CatalogoBO.alterarCatalogo(obj);
+		
+		if (result)
+			System.out.println("O catalogo foi alterado com sucesso");
+		else
+			System.out.println("O catalogo nï¿½o foi alterado");
+	}
+	
+	private static void deletar() throws Exception{
+		Boolean result = CatalogoBO.deletarCatalogo(21);
+		
+		if (result)
+			System.out.println("O catalogo foi deletado com sucesso");
+		else
+			System.out.println("O catalogo nï¿½o foi deletado");
+	}
 }
