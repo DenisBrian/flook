@@ -114,6 +114,29 @@ public class CursoDAO {
 		return cursos;
 	}
 
+	public Boolean deletar(int cod) throws Exception{
+		String _sql = "DELETE T_FLO_CURSO WHERE CD_CURSO = ?";
+		ps = con.prepareStatement(_sql);
+		ps.setInt(1, cod);
+		
+		int affectedRows = ps.executeUpdate();
+		
+		return affectedRows > 0;		
+	}
+
+	public Boolean alterar(Curso obj) throws Exception{
+		String _sql = "UPDATE T_FLO_CURSO SET NM_CURSO = ? WHERE CD_CURSO = ?";
+		ps = con.prepareStatement(_sql);
+		
+		ps.setString(1, obj.getNome());
+		ps.setInt(2, obj.getCodigo());
+		
+		int affectedRows = ps.executeUpdate();
+		
+		return affectedRows > 0;
+	}
+
+	
 	/**
 	 * Metodo que faz o fechamento da conexão com o banco de dados.
 	 * @throws Exception Exceção checked SQLExption
@@ -122,4 +145,5 @@ public class CursoDAO {
 	public void fechar() throws Exception {
 		con.close();
 	}
+	
 }
