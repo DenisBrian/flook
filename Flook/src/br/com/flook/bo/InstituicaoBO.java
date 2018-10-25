@@ -102,7 +102,7 @@ public class InstituicaoBO {
 		return result;
 	}
 
-	public static boolean deletarInstituicao(int cod) throws Exception{
+	public static boolean deletarInstituicao(int cod)  throws Exception{
 		if(cod == 0)
 			return false;
 				

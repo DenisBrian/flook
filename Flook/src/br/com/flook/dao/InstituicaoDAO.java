@@ -116,7 +116,7 @@ public class InstituicaoDAO {
 	
 	
 
-	public boolean alteraInstituicao(Intituicao instituicao) throws Exception{
+	public boolean alteraInstituicao(Intituicao instituicao)  throws Exception{
 
 		String _sql = "UPDATE T_FLO_INSTITUICAO SET NM_INSTITUICAO = ?, DS_TIPO_INSTITUICAO = ?,"
 				+ " DS_INSTITUICAO = ?, IMG_INSTITUICAO = ?  WHERE CD_INSTITUICAO = ?";
