@@ -110,7 +110,7 @@ public class InstituicaoDAO {
 	 * @throws Exception Exceção checked SQLExption
 	 * @author DENIS BRIAN CANOLA
 	 */
-	public void fechar() throws Exception {
+	public void fechar()  throws Exception {
 		con.close();
 	}
 	
