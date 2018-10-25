@@ -152,6 +152,44 @@ public class EnderecoDAO {
 		
 		return ends;	
 	}
+
+	public Boolean alterar(Endereco obj) throws Exception {
+		String _sql = "UPDATE T_FLO_ENDERECO "
+				+ "SET NM_BAIRRO = ?, "
+				+ "NR_CEP = ?, "
+				+ "NM_CIDADE = ?, "
+				+ "NM_COMPLEMENTO = ?, "
+				+ "SG_ESTADO = ?, "
+				+ "DS_LOGRADOURO = ?, "
+				+ "NR_ENDERECO = ? "
+				+ "WHERE CD_ENDERECO = ?";
+		
+		ps = con.prepareStatement(_sql);
+
+		ps.setString(1, obj.getBairro());
+		ps.setString(2, obj.getCep());
+		ps.setString(3, obj.getCidade());
+		ps.setString(4, obj.getComplemento());
+		ps.setString(5, obj.getEstado());
+		ps.setString(6, obj.getLogradouro());
+		ps.setString(7, obj.getNumero());
+		
+		ps.setInt(8, obj.getCodigo());
+
+		int affectedRows = ps.executeUpdate();
+		
+		return affectedRows > 0;
+	}
+	
+	public Boolean deletar(int cod) throws Exception {
+		String _sql = "DELETE T_FLO_ENDERECO WHERE CD_ENDERECO = ?";
+		ps = con.prepareStatement(_sql);
+		ps.setInt(1, cod);
+
+		int affectedRows = ps.executeUpdate();
+		
+		return affectedRows > 0;
+	}
 	
 	/**
 	 * Metodo que faz o fechamento da conexão com o banco de dados.

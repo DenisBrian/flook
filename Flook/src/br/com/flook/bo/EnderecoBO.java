@@ -2,6 +2,7 @@ package br.com.flook.bo;
 
 import br.com.flook.beans.Endereco;
 import br.com.flook.dao.EnderecoDAO;
+
 /**
 * Responável por todas as Regras de negócio e padronizações do Endereco
 * 1°) A quantidades de caracteres do logradouro não pode ser maior que 50
@@ -58,5 +59,53 @@ public class EnderecoBO {
 		dao.fechar();
 		return codigo;
 	}
+	
+	public static Endereco obterEndereco(int cod) throws Exception{
+		EnderecoDAO dao = new EnderecoDAO();
+		Endereco obj = dao.obter(cod);
+		dao.fechar();
+		return obj;
+	}
+	
+	public static Boolean alterarEndereco(Endereco obj) throws Exception {
+		if(obj.getCodigo() == 0)
+			return false;
+		
+		if(obj.getLogradouro().length() > 50)
+			return false;
+		
+		if(obj.getNumero().length() > 20)
+			return false;
+		
+		if(obj.getComplemento().length() > 200)
+			return false;
+		
+		if(obj.getBairro().length() > 120)
+			return false;
+		
+		if(obj.getCidade().length() > 120)
+			return false;
+		
+		if(obj.getEstado().length() > 2)
+			return false;
+		
+		if(obj.getCep().length() == 0 || obj.getCep().length() > 8)
+			return false;
+		
+		EnderecoDAO dao = new EnderecoDAO();
+		Boolean result = dao.alterar(obj);
+		dao.fechar();
+		return result;
+	}
 
+	public static Boolean deletarEndereco(int cod) throws Exception{
+		if(cod == 0)
+			return false;
+				
+		EnderecoDAO dao = new EnderecoDAO();
+		Boolean result = dao.deletar(cod);
+		dao.fechar();
+		
+		return result;
+	}
 }
