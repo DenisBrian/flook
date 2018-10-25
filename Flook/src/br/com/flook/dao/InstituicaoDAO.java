@@ -113,4 +113,33 @@ public class InstituicaoDAO {
 	public void fechar() throws Exception {
 		con.close();
 	}
+	
+	
+
+	public boolean alteraInstituicao(Intituicao instituicao) throws Exception{
+
+		String _sql = "UPDATE T_FLO_INSTITUICAO SET NM_INSTITUICAO = ?, DS_TIPO_INSTITUICAO = ?,"
+				+ " DS_INSTITUICAO = ?, IMG_INSTITUICAO = ?  WHERE CD_INSTITUICAO = ?";
+		
+		ps = con.prepareStatement(_sql);
+		ps.setString(1, instituicao.getNome());
+		ps.setString(2, instituicao.getTipo());
+		ps.setString(3, instituicao.getDescricao());
+		ps.setString(4, instituicao.getLogo());
+		ps.setInt(5, instituicao.getCodigo);
+		
+		int affectedRows = ps.executeUpdate();
+		return affectedRows > 0;
+	} 
+
+	public boolean deletarInstituicao(int id) throws Exception {
+
+		String _sql = "DELETE FROM T_FLO_INSTITUICAO WHERE cd_instituicao = ?";
+		ps = con.prepareStatement(_sql);
+		ps.setInt(1, id);
+
+		int affectedRows = ps.executeUpdate();
+		return affectedRows > 0;
+	}
+
 }

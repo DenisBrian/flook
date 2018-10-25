@@ -70,4 +70,46 @@ public class InstituicaoBO {
 		dao.fechar();
 		return obj;
 	}
+	
+	
+	public static boolean alterarInstituiao(Instituicao obj) throws Exception{
+	
+		if(obj.getNome().length() == 0 || obj.getNome().length() > 30)
+			return false;
+		
+		if(obj.getTipo().length() > 7)
+			return false;
+		
+		if(obj.getDescricao().length() > 234)
+			return false;
+		
+		if(obj.getLogo().length() > 255)
+			return false;
+		
+		InstituicaoDAO dao = new InstituicaoDAO();
+		boolean result = dao.alterar(obj);
+		
+		
+		if (instituicao > 0) {
+			for (Endereco end : obj.getEndereco()) {
+				int endereco = EnderecoBO.novoEndereco(end);
+
+				if (endereco > 0)
+					dao.gravar(instituicao, endereco);
+			}
+		
+		dao.fechar();
+		return result;
+	}
+
+	public static boolean deletarInstituicao(int cod) throws Exception{
+		if(cod == 0)
+			return false;
+				
+		InstituicaoDAO dao = new InstituicaoDAO();
+		boolean result = dao.deletar(cod);
+		dao.fechar();
+		
+		return result;
+	}
 }

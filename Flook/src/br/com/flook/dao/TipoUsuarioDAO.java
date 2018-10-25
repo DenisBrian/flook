@@ -104,21 +104,16 @@ public class TipoUsuarioDAO {
 		String _sql = "DELETE T_FLO_TIPO_USUARIO WHERE CD_TIPO_USUARIO = ?";
 		ps = con.prepareStatement(_sql);
 		ps.setInt(1, cod);
-
 		int affectedRows = ps.executeUpdate();
-		
 		return affectedRows > 0;
 	}
 
 	public Boolean alterar(TipoUsuario obj) throws Exception {
 		String _sql = "UPDATE T_FLO_TIPO_USUARIO SET DS_TIPO_USUARIO = ? WHERE CD_TIPO_USUARIO = ?";
 		ps = con.prepareStatement(_sql);
-
 		ps.setString(1, obj.getTipo());
 		ps.setInt(2, obj.getCodigo());
-
 		int affectedRows = ps.executeUpdate();
-		
 		return affectedRows > 0;
 	}
 
