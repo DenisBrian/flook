@@ -49,9 +49,9 @@ public class TesteCurso {
 		int codigo = CursoBO.novoCurso(obj);
 
 		if (codigo > 0)
-			System.out.println("O curso foi cadastrado com sucesso, o código gerado foi: " + codigo);
+			System.out.println("O curso foi cadastrado com sucesso, o cï¿½digo gerado foi: " + codigo);
 		else
-			System.out.println("O curso não foi cadastrado");
+			System.out.println("O curso nï¿½o foi cadastrado");
 	}
 
 	private static void obterPorCodigo() throws Exception {
@@ -66,4 +66,27 @@ public class TesteCurso {
 		}
 
 	}
+	
+	public static void alterar() throws Exception{
+		Curso obj = new Curso();
+		obj.setCodigo(9);
+		obj.setNome("Nome Alterado");
+		
+		Boolean result = CursoBO.alterarCurso(obj);
+		
+		if(result)
+			System.out.println("O curso foi alterado com sucesso");
+		else 
+			System.out.println("O curso nÃ£o foi alterado");
+	}
+	
+	private static void deletar() throws Exception{
+		Boolean result = CursoBO.deletarCurso(9);
+		
+		if(result)
+			System.out.println("O curso foi deletado com sucesso");
+		else 
+			System.out.println("O curso nÃ£o foi deletado");
+	}
+	
 }

@@ -70,4 +70,31 @@ public class CursoBO {
 		dao.fechar();
 		return curso;
 	}
+	
+	public static Boolean alterarCurso(Curso obj) throws Exception{
+		if(obj.getCodigo() == 0)
+			return false;
+		
+		if(obj.getNome().length() == 0 || obj.getNome().length() > 50)
+			return false;
+		
+		CursoDAO dao = new CursoDAO();
+		Boolean result = dao.alterar(obj);
+		dao.fechar();
+		
+		return result;
+	}
+	
+	public static Boolean deletarCurso(int cod) throws Exception {
+		if(cod == 0)
+			return false;
+		
+		CursoDAO dao = new CursoDAO();
+		Boolean result = dao.deletar(cod);
+		dao.fechar();
+		
+		return result;
+	}
+	
+	
 }
